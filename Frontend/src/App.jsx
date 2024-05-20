@@ -14,6 +14,7 @@ import Addprofile from './Components/Addprofile'
 import Home2 from './Components/Home2'
 import Manageuser from './Components/Manageuser'
 import ProfileList from './Components/ProfileList'
+import View from './Components/View'
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
       <Route path='/Home2' element={<Home2/>}/>
       <Route path='/Manageuser' element={<Manageuser/>}/>
       <Route path='/ProfileList' element={<ProfileList/>}/>
+      <Route path='/View/:id' element={<View/>} />
       </Routes>
       </UserProvider>
 

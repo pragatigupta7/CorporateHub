@@ -53,7 +53,7 @@ const ProfileList = () => {
                         <div className="pt-5 text-base font-semibold leading-7">
                             <p>
                                 <Link
-                                   to={"/view/" + item._id}
+                                   to={"/View/" + item._id}
                                     className="text-sky-500 transition-all duration-300 group-hover:text-white"
                                 >
                                    Learn more
