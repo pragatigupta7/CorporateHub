@@ -5,6 +5,7 @@ const Signup = () => {
     <div>
         
         <>
+        
   {/* component */}
   <style
     dangerouslySetInnerHTML={{
