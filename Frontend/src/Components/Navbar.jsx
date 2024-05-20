@@ -41,6 +41,11 @@ const Navbar = () => {
             Home
           </Link>
         </li>
+        <li>
+          <Link className="hover:text-gray-500" to="/ProfileList">
+            ProfileList
+          </Link>
+        </li>
       </ul>
     </div>
     <div className="flex items-center gap-6">
