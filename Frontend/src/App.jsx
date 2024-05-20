@@ -11,6 +11,8 @@ import Signupp from './Components/Signupp'
 import About from './Components/About'
 import Features from './Components/Features'
 import Addprofile from './Components/Addprofile'
+import Home2 from './Components/Home2'
+import Manageuser from './Components/Manageuser'
 
 const App = () => {
   return (
@@ -30,6 +32,8 @@ const App = () => {
       <Route path='/Features' element={<Features/>}/>
       <Route path='/About' element={<About/>}/>
       <Route path='/Addprofile' element={<Addprofile/>}/>
+      <Route path='/Home2' element={<Home2/>}/>
+      <Route path='/Manageuser' element={<Manageuser/>}/>
       </Routes>
       </UserProvider>
 
