@@ -21,9 +21,9 @@ const Home2 = () => {
 
 
       </div>
-      <div className='bg-blue-950 h-[400px] md:h-[500px]'>
-        <div className='text-center text-white py-[120px]'>
-          <h1 className='font-serif text-2xl md:text-5xl'>Corporate Hub</h1>
+      <div className= 'bg-[url(https://sadiracapitalllc.com/wp-content/uploads/2022/04/atlanta-financial-center-mark-chandler-e1650643630483.jpg)] bg-cover bg-no-repeat bg-scroll   h-[500px] md:h-[700px]'>
+        <div className='text-center text-white py-[120px] '>
+          <h1 className='font-serif text-2xl md:text-5xl mt-16'>Corporate Hub</h1>
           <h2 className='font-bold text-3xl md:text-4xl my-2'>Empowering Innovation, Connecting Success</h2>
           <p className='text-2xl md:text-3xl my-4 '>
             <ReactTyped
