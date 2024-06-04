@@ -15,9 +15,8 @@ import Home2 from './Components/Home2'
 import Manageuser from './Components/Manageuser'
 import ProfileList from './Components/ProfileList'
 import View from './Components/View'
-import Dashboard from './Components/Dashboard'
-import EditPage from './Components/EditPage'
-import ManageProfiles from './Components/ManageProfiles'
+import Admin from './Components/Admin/Index'
+import Dashboard from './Components/Admin/dashboard'
 
 const App = () => {
   return (
@@ -44,6 +43,12 @@ const App = () => {
       <Route path='/ProfileList' element={<ProfileList/>}/>
       <Route path='/View/:id' element={<View/>} />
       <Route path='Dashboard' element={<Dashboard/>} />
+
+
+      <Route path='/Admin' element={<Admin/>}>
+      <Route path='dashboard' element={<Dashboard/>} />
+
+      </Route>
 
 
 
