@@ -80,7 +80,7 @@ const Signupp = () => {
                                 className="absolute triangle  min-h-screen right-0 w-16"
                                 style={{}}
                             />
-                            <Link
+                           {/*} <Link
                                 to="https://codepen.io/uidesignhub"
                                 target="_blank"
                                 title="codepen aji"

@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import { ReactTyped } from "react-typed";
+import comm from "../assets/community.png"
+import mission from "../assets/mission.png"
+import pop from "../assets/pop.png"
+import vision from "../assets/vision.png"
 
 const Home2 = () => {
   const [open, setOpen] = useState(false)
@@ -45,15 +49,14 @@ const Home2 = () => {
   <div className="py-12 bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="lg:text-center">
-        <h2 className="font-heading mb-4 bg-orange-100 text-orange-800 px-4 py-2 rounded-lg md:w-64 md:mx-auto text-xs font-semibold tracking-widest text-black uppercase title-font">
-          Why choose us?
+        <h2 className="font-heading mb-4 bg-orange-100 text-orange-900 px-4 py-2 rounded-lg md:w-64 md:mx-auto text-3xl font-semibold tracking-widest text-black uppercase title-font">
+          ABOUT US
         </h2>
         <p className="font-heading mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
-          We know tech, we know finance. We are fintech experts.
+        Network. Innovate. Succeed.
         </p>
         <p className="mt-4 max-w-2xl text-lg text-gray-500 lg:mx-auto">
-          We know how to handle taxation for all the countried we operate in. We
-          care for our customers and help them manage cashflows.
+        At CORPORATE HUB, our mission is to empower businesses to achieve their fullest potential by fostering a dynamic ecosystem of innovation and collaboration
         </p>
       </div>
       <div className="mt-10">
@@ -61,64 +64,56 @@ const Home2 = () => {
           <div className="relative">
             <dt>
               <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
-                <img src="https://www.svgrepo.com/show/503163/api-settings.svg" />
+                <img src={mission} />
               </div>
               <p className="font-heading ml-16 text-lg leading-6 font-bold text-gray-700">
-                Powerful API
+              Our Mission
               </p>
             </dt>
             <dd className="mt-2 ml-16 text-base text-gray-500">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-              impedit perferendis suscipit eaque, iste dolor cupiditate
-              blanditiis ratione.
+            Empowering businesses by providing an innovative ecosystem that fosters collaboration, growth, and success.
             </dd>
           </div>
           <div className="relative">
             <dt>
               <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
-                <img src="https://www.svgrepo.com/show/503138/webpack.svg" />
+                <img src={comm} />
               </div>
               <p className="font-heading ml-16 text-lg leading-6 font-bold text-gray-700">
-                Easy to integrate SDK
+              Our Community
               </p>
             </dt>
             <dd className="mt-2 ml-16 text-base text-gray-500">
               {" "}
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-              impedit perferendis suscipit eaque, iste dolor cupiditate
-              blanditiis ratione.
+              Our community is built on collaboration, innovation, and mutual support. 
             </dd>
           </div>
           <div className="relative">
             <dt>
               <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
-                <img src="https://www.svgrepo.com/show/511771/dashboard-671.svg" />
+                <img src={pop}/>
               </div>
               <p className="font-heading ml-16 text-lg leading-6 font-bold text-gray-700">
-                Low Transaction Cost
+              Our Value Proposition
               </p>
             </dt>
             <dd className="mt-2 ml-16 text-base text-gray-500">
               {" "}
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-              impedit perferendis suscipit eaque, iste dolor cupiditate
-              blanditiis ratione.
+              We offer unparalleled networking opportunities, cutting-edge resources, and a vibrant community dedicated to driving business excellence. Our corporate hub is designed to help businesses at all stages scale, innovate, and thrive in a competitive market.
             </dd>
           </div>
           <div className="relative">
             <dt>
               <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
-                <img src="https://www.svgrepo.com/show/76267/free-commercial-label.svg" />
+                <img src={vision} />
               </div>
               <p className="font-heading ml-16 text-lg leading-6 font-bold text-gray-700">
-                Powerful Dashboard
+              Our Vision
               </p>
             </dt>
             <dd className="mt-2 ml-16 text-base text-gray-500">
               {" "}
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-              impedit perferendis suscipit eaque, iste dolor cupiditate
-              blanditiis ratione.
+              Our vision is to become the leading global corporate hub, continuously evolving to meet the dynamic needs of the business world.
             </dd>
           </div>
         </dl>
@@ -142,10 +137,7 @@ const Home2 = () => {
             Features
           </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-            L'informatique est vaste et les langages naissent presque à tout
-            moment, je fais tout mon possible pour être à la hauteur afin de
-            répondre au besoin de mes clients et d'apporter de l'aide aux
-            nouveaux développeurs.
+          Empower your business with our innovative features: state-of-the-art coworking spaces, expert mentorship, tailored workshops, and a global network designed to foster growth, collaboration, and success. Elevate your enterprise with us.
           </p>
           <div className="flex mt-6 justify-center">
             <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex " />
@@ -173,13 +165,10 @@ const Home2 = () => {
                 </div>
                 <div className="flex-grow ">
                   <h2 className=" text-xl title-font font-medium mb-3 text-black">
-                    Webdesign
+                  Community and Networking Events
                   </h2>
                   <p className="leading-relaxed text-sm text-justify text-black">
-                    Donner du goût ? de la couleur aux applications, je le fais
-                    afin de rendre vos sites attrayants ?. Avant de devenir
-                    webdesigner, depuis tout petit j'étais déjà familier à la
-                    couleur et du dessin.
+                  Regularly scheduled events to foster a sense of community and facilitate valuable business connections.
                   </p>
                 </div>
               </div>
@@ -206,13 +195,10 @@ const Home2 = () => {
                 </div>
                 <div className="flex-grow">
                   <h2 className=" text-xl title-font font-medium mb-3 text-black">
-                    Intégration web
+                  Innovative Collaboration Tools
                   </h2>
                   <p className="leading-relaxed text-sm text-justify text-black">
-                    Donner du goût ? de la couleur aux applications, je le fais
-                    afin de rendre vos sites attrayants ?. Avant de devenir
-                    webdesigner, depuis tout petit j'étais déjà familier à la
-                    couleur et du dessin.
+                  Advanced technology and resources to facilitate seamless collaboration and productivity.
                   </p>
                 </div>
               </div>
@@ -239,13 +225,10 @@ const Home2 = () => {
                 </div>
                 <div className="flex-grow">
                   <h2 className=" text-xl title-font font-medium mb-3 text-black">
-                    Developpement Back-end
+                  Global Networking Opportunities
                   </h2>
                   <p className="leading-relaxed text-sm text-justify text-black">
-                    Grâce à Php et ces frameworks (Larave, Symfoni, Slim), je
-                    peux vous réaliser un site dynamique c'est-à-dire qui
-                    interagie avec votre base de données ?. Nous pouvons
-                    essayer.
+                  Connect with a diverse network of professionals and businesses from around the world.
                   </p>
                 </div>
               </div>
@@ -258,30 +241,31 @@ const Home2 = () => {
 </>
 
 <div className='md:py-[100px] px-3'>
+<h1 className=" title-font  mb-4 text-4xl font-extrabold leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-6xl text-center">Some Fields Are</h1>
   <div className='max-w-[1050px] mx-auto md:grid grid-cols-3 gap-6'>
+ 
     <div className='shadow-xl h-[400px] hover:scale-105 duration-500 my-4 rounded-xl text-center p-3'>
+   
       <img src={"heartrate.png"} alt='' className='h-[80px] mx-auto my-2' />
-      <h1 className='font-bold text-xl my-2 '>Heart Rates</h1>
-      <h1 className='font-[math]'>Range 60 to 100 (BPM)</h1>
-      <p className='p-2 font-[math]'>Maintain a healthy weight through <br/> diet and exercise</p>
-      <p className='p-2 font-[math]'>Aim for 7-9 hours of quality sleep <br/> each night</p>
-      <p className='p-2 font-[math]'>Manage stress through relaxation techniques such as deep breathing or meditation</p>
+      <h1 className='font-bold text-xl my-2 '>Digital Marketing</h1>
+     
+      <p className='p-2 font-[math]'>Digital marketing for a corporate hub website involves leveraging various online strategies to attract businesses, entrepreneurs, and professionals to join the hub's community and utilize its services. </p>
+    
     </div>
     <div className='shadow-xl h-[400px] hover:scale-105 duration-500 my-4 bg-gray-100 rounded-xl text-center p-3'>
     <img src={"kcal.png"} alt='' className='h-[100px] mx-auto my-2' />
-    <h1 className='font-bold text-xl my-2'>Calories</h1>
-      <h1 className='font-[math]'>Daily burn 1200 to 2400 (BMR)</h1>
-      <p className='p-2 font-[math]'>Adding Fruits and vegetables in daily routine.</p>
-      <p className='p-2 font-[math]'> Include foods rich in healthy fats such as avocados, nuts, seeds, olive oil.</p>
-      <p className='p-2 font-[math]'>Doing Exercise like Cardiovascular , Flexibility and Balance and Yoga</p>
+    <h1 className='font-bold text-xl my-2'>Information Technology (IT) </h1>
+      
+      <p className='p-2 font-[math]'>Information Technology (IT) plays a crucial role in ensuring the seamless operation and effectiveness of a corporate hub website.</p>
+     
     </div>
     <div className='shadow-xl h-[400px] hover:scale-105 duration-500 my-4 rounded-xl text-center p-3'>
     <img src={"walking.png"} alt='' className='h-[100px] mx-auto my-2' />
-    <h1 className='font-bold text-xl my-2'>Walking</h1>
-      <h1 className='font-[math]'>Daily Steps 10,000 </h1>
-      <p className='p-2 font-[math]'> Regular walking can help strengthen the heart, lower blood pressure.</p>
-      <p className='p-2 font-[math]'> Walking burns calories, making it an effective way to support weight loss.</p>
-      <p className='p-2 font-[math]'>Lorem, ipsum dolor sit amet consectetur</p>
+    <h1 className='font-bold text-xl my-2'>Social media</h1>
+      
+      <p className='p-2 font-[math]'> Social media is a powerful tool for promoting a corporate hub website, engaging with current members, and attracting new businesses and professionals. 
+      </p>
+      
 
     </div>
   </div>
