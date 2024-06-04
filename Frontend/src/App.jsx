@@ -16,6 +16,8 @@ import Manageuser from './Components/Manageuser'
 import ProfileList from './Components/ProfileList'
 import View from './Components/View'
 import Dashboard from './Components/Dashboard'
+import EditPage from './Components/EditPage'
+import ManageProfiles from './Components/ManageProfiles'
 
 const App = () => {
   return (
@@ -31,12 +33,14 @@ const App = () => {
       <Route path='/Home' element={<Home/>}/>
      
       <Route path='/Contact' element={<Contact/>}/>
+      <Route path='/EditPage' element={<EditPage/>}/>
       <Route path='/Signupp' element={<Signupp/>}/>
       <Route path='/Features' element={<Features/>}/>
       <Route path='/About' element={<About/>}/>
       <Route path='/Addprofile' element={<Addprofile/>}/>
       <Route path='/Home2' element={<Home2/>}/>
       <Route path='/Manageuser' element={<Manageuser/>}/>
+      <Route path='/ManageProfiles' element={<ManageProfiles/>}/>
       <Route path='/ProfileList' element={<ProfileList/>}/>
       <Route path='/View/:id' element={<View/>} />
       <Route path='Dashboard' element={<Dashboard/>} />

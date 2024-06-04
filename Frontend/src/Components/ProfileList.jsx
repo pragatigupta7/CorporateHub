@@ -6,7 +6,7 @@ const ProfileList = () => {
     const [profiles, setProfile] = useState([])
 
     const fetchaddprofile = async () => {
-        const res = await fetch('http://localhost:5000/addprofile/getall')
+        const res = await fetch('http://localhost:5000/profile/getall')
         console.log(res.status)
         if (res.status === 200) {
             const data = await res.json();
@@ -40,10 +40,10 @@ const ProfileList = () => {
                                 />
                             </svg>
                         </span>
-                        <h4 className="text-2xl font-bold dark:text-black group-hover:text-white">    {item.companyname}</h4>
+                        <h4 className="text-2xl font-bold dark:text-black group-hover:text-white">    {item.name}</h4>
                         <div className="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
                             <p className="dark:text-black group-hover:text-white">
-                                {item.description}
+                                {item.email}
                             </p>
                         </div>
                         <div className="pt-5 text-base font-semibold leading-7">

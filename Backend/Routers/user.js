@@ -14,7 +14,7 @@ router.post('/add',(req,res)=>{
     });
 })
 router.post('/authenticate', (req,res)=> {                                          //login
-    Model.findOne(req.body)
+    Model.findOne(req.body).populate('profile')
     .then((result)=> {
         if(result)res.json(result);
         else res.status(400).json({message: 'login failed'});
@@ -48,7 +48,7 @@ router.put('/update/:id', (req,res)=> {
     if (!req.params.id) {
         return res.status(400).json({ error: 'Missing id parameter' });
     }                                    //forget       
-    Model.findByIdAndUpdate(req.params.id,req.body,{new:true})                                                                  //search sbkuch
+    Model.findByIdAndUpdate(req.params.id,req.body,{new:true}).populate('profile')                                                                //search sbkuch
     .then((result)=> {
        res.status(200).json(result);
     }).catch((err)=>{

@@ -1,11 +1,11 @@
 import { Formik } from 'formik';
 import React, { useEffect, useState } from 'react'
-import toast from 'react-hot-toast';
+import { enqueueSnackbar } from 'notistack';
 
 const EditPage = () => {
 
   const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
-
+  console.log(currentUser);
   const [companyProfile, setCompanyProfile] = useState(currentUser.profile);
 
   console.log(currentUser);
@@ -48,7 +48,7 @@ const EditPage = () => {
             .then(data => {
               console.log(data);
               setCompanyProfile(data);
-              toast.success('Profile Updated')
+              enqueueSnackbar('Profile Updated Successfully', { variant: 'success'})
             })
         }
       }).catch((err) => {
@@ -82,7 +82,7 @@ const EditPage = () => {
       .then((response) => {
         console.log(response.status);
         if (response.status === 200) {
-          toast.success('Created Profile Successfully');
+          enqueueSnackbar('Profile Created Successfully', { variant: 'success' })
           response.json()
             .then((result) => {
               console.log(result);
@@ -93,7 +93,7 @@ const EditPage = () => {
         }
       }).catch((err) => {
         console.log(err);
-        toast.error('Something went wrong');
+        enqueueSnackbar('Something went wrong', { variant: 'error' })
       });
   }
 
