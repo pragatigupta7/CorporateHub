@@ -133,7 +133,7 @@ const ProfileList = () => {
 
             </div>
             <div className="container ">
-                <div className="row ">
+                <div className="grid grid-cols-4 ">
                     {displayProfile()}
                 </div>
             </div>
