@@ -47,8 +47,10 @@ const Home2 = () => {
       </div>
       <section className="bg-dark">
   <div className="py-12 bg-white">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto p-8 shadow-lg bg-blue-100  sm:px-6 lg:px-8">
       <div className="lg:text-center">
+        <h2 className="font-heading mb-12 bg-blue-900 text-blue-100 px-4 py-2 rounded-lg md:w-full md:mx-auto text-2xl font-semibold tracking-widest text-black uppercase title-font">
+          Why choose us?
         <h2 className="font-heading mb-4 bg-orange-100 text-orange-900 px-4 py-2 rounded-lg md:w-64 md:mx-auto text-3xl font-semibold tracking-widest text-black uppercase title-font">
           ABOUT US
         </h2>
@@ -61,7 +63,7 @@ const Home2 = () => {
       </div>
       <div className="mt-10">
         <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-          <div className="relative">
+          <div className="relative shadow p-4 m-3">
             <dt>
               <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
                 <img src={mission} />
@@ -74,7 +76,7 @@ const Home2 = () => {
             Empowering businesses by providing an innovative ecosystem that fosters collaboration, growth, and success.
             </dd>
           </div>
-          <div className="relative">
+          <div className="relative shadow p-4 m-3 ">
             <dt>
               <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
                 <img src={comm} />
@@ -88,7 +90,7 @@ const Home2 = () => {
               Our community is built on collaboration, innovation, and mutual support. 
             </dd>
           </div>
-          <div className="relative">
+          <div className="relative shadow p-4 m-3">
             <dt>
               <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
                 <img src={pop}/>
@@ -102,7 +104,7 @@ const Home2 = () => {
               We offer unparalleled networking opportunities, cutting-edge resources, and a vibrant community dedicated to driving business excellence. Our corporate hub is designed to help businesses at all stages scale, innovate, and thrive in a competitive market.
             </dd>
           </div>
-          <div className="relative">
+          <div className="relative  shadow p-4 m-3">
             <dt>
               <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
                 <img src={vision} />
@@ -243,29 +245,29 @@ const Home2 = () => {
 <div className='md:py-[100px] px-3'>
 <h1 className=" title-font  mb-4 text-4xl font-extrabold leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-6xl text-center">Some Fields Are</h1>
   <div className='max-w-[1050px] mx-auto md:grid grid-cols-3 gap-6'>
- 
-    <div className='shadow-xl h-[400px] hover:scale-105 duration-500 my-4 rounded-xl text-center p-3'>
-   
+    <div className='shadow-xl bg-blue-100 h-[400px] hover:scale-105 duration-500 my-4 rounded-xl text-center p-3'>
       <img src={"heartrate.png"} alt='' className='h-[80px] mx-auto my-2' />
-      <h1 className='font-bold text-xl my-2 '>Digital Marketing</h1>
-     
-      <p className='p-2 font-[math]'>Digital marketing for a corporate hub website involves leveraging various online strategies to attract businesses, entrepreneurs, and professionals to join the hub's community and utilize its services. </p>
-    
+      <h1 className='font-bold text-2xl text-blue-900  my-2 '>Heart Rates</h1>
+      <h1 className='font-[math]'>Range 60 to 100 (BPM)</h1>
+      <p className='p-2 font-[math]'>Maintain a healthy weight through <br/> diet and exercise</p>
+      <p className='p-2 font-[math]'>Aim for 7-9 hours of quality sleep <br/> each night</p>
+      <p className='p-2 font-[math]'>Manage stress through relaxation techniques such as deep breathing or meditation</p>
     </div>
-    <div className='shadow-xl h-[400px] hover:scale-105 duration-500 my-4 bg-gray-100 rounded-xl text-center p-3'>
+    <div className='shadow-xl bg-blue-100 h-[400px] hover:scale-105 duration-500 my-4  rounded-xl text-center p-3'>
     <img src={"kcal.png"} alt='' className='h-[100px] mx-auto my-2' />
-    <h1 className='font-bold text-xl my-2'>Information Technology (IT) </h1>
-      
-      <p className='p-2 font-[math]'>Information Technology (IT) plays a crucial role in ensuring the seamless operation and effectiveness of a corporate hub website.</p>
-     
+    <h1 className='font-bold text-2xl my-2 text-blue-900'>Calories</h1>
+      <h1 className='font-[math]'>Daily burn 1200 to 2400 (BMR)</h1>
+      <p className='p-2 font-[math]'>Adding Fruits and vegetables in daily routine.</p>
+      <p className='p-2 font-[math]'> Include foods rich in healthy fats such as avocados, nuts, seeds, olive oil.</p>
+      <p className='p-2 font-[math]'>Doing Exercise like Cardiovascular , Flexibility and Balance and Yoga</p>
     </div>
-    <div className='shadow-xl h-[400px] hover:scale-105 duration-500 my-4 rounded-xl text-center p-3'>
+    <div className='shadow-xl bg-blue-100 h-[400px] hover:scale-105 duration-500 my-4 rounded-xl text-center p-3'>
     <img src={"walking.png"} alt='' className='h-[100px] mx-auto my-2' />
-    <h1 className='font-bold text-xl my-2'>Social media</h1>
-      
-      <p className='p-2 font-[math]'> Social media is a powerful tool for promoting a corporate hub website, engaging with current members, and attracting new businesses and professionals. 
-      </p>
-      
+    <h1 className='font-bold text-2xl text-blue-900 my-2'>Walking</h1>
+      <h1 className='font-[math]'>Daily Steps 10,000 </h1>
+      <p className='p-2 font-[math]'> Regular walking can help strengthen the heart, lower blood pressure.</p>
+      <p className='p-2 font-[math]'> Walking burns calories, making it an effective way to support weight loss.</p>
+      <p className='p-2 font-[math]'>Lorem, ipsum dolor sit amet consectetur</p>
 
     </div>
   </div>
@@ -273,7 +275,6 @@ const Home2 = () => {
 <div className="py-4 bg-white">
   <div className="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
     <div className="text-center">
-      <p className="mt-4 text-sm leading-7 text-gray-500 font-regular">F.A.Q</p>
       <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900">
         Frequently Asked <span className="text-indigo-600">Questions</span>
       </h3>
