@@ -2,6 +2,7 @@ import { Formik } from 'formik';
 import React, { useEffect, useState } from 'react'
 import { enqueueSnackbar } from 'notistack';
 
+
 const EditPage = () => {
 
   const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
@@ -102,14 +103,15 @@ const EditPage = () => {
     <>
       {
         !currentUser.profile ?
-          <button onClick={createNewProfile} className='px-5 py-3 bg-blue-600 text-white rounded'>Create Profile</button> :
+        <button onClick={createNewProfile} className='px-5 py-3 bg-blue-600 text-white rounded'>Create Profile</button>  :
+          
           (
-            <div className="bg-blue-100 rounded-xl shadow py-4 px-16 mx-auto bg-[url('')]" >
+            <div className="bg-blue-900 rounded-xl shadow py-4 px-16 mx-auto bg-[url('')]" >
               <div className="mb-8 text-center">
                 <h2 className="text-xl font-bold text-gray-800 dark:text-neutral-200">
                   Edit page
                 </h2>
-                <p className="text-sm text-gray-600 dark:text-neutral-400">
+                <p className="text-sm text-white-600 dark:text-neutral-400">
                   Manage your site.
                 </p>
               </div>

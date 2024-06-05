@@ -13,10 +13,14 @@ import Features from './Components/Features'
 import Addprofile from './Components/Addprofile'
 import Home2 from './Components/Home2'
 import Manageuser from './Components/Manageuser'
+import ManageProfiles from './Components/ManageProfiles'
 import ProfileList from './Components/ProfileList'
 import View from './Components/View'
 import Admin from './Components/Admin/Index'
 import Dashboard from './Components/Admin/dashboard'
+import EditPage from './Components/EditPage'
+import Viewpage from './Components/Viewpage'
+import Button from './Components/Button'
 
 const App = () => {
   return (
@@ -42,11 +46,13 @@ const App = () => {
       <Route path='/ManageProfiles' element={<ManageProfiles/>}/>
       <Route path='/ProfileList' element={<ProfileList/>}/>
       <Route path='/View/:id' element={<View/>} />
-      <Route path='Dashboard' element={<Dashboard/>} />
+      <Route path='/Dashboard' element={<Dashboard/>} />
+      <Route path='/Viewpage/:id' element={<Viewpage/>} />
+      <Route path='/Button' element={<Button/>} />
 
 
       <Route path='/Admin' element={<Admin/>}>
-      <Route path='dashboard' element={<Dashboard/>} />
+      {/*<Route path='dashboard' element={<Dashboard/>} />*/}
 
       </Route>
 

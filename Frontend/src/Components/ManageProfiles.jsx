@@ -49,8 +49,7 @@ const ManageProfiles = () => {
               </button>
               <button
                 type="button" onClick={e => deleteUser(profile._id)}
-                className="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-              >
+                className="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
                 Delete
               </button>
             </td>

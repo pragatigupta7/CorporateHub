@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const ProfileList = () => {
 
     const [profiles, setProfile] = useState([])
+    const [masterList, setMasterList] = useState([]);
 
     const fetchaddprofile = async () => {
         const res = await fetch('http://localhost:5000/profile/getall')
@@ -12,6 +13,7 @@ const ProfileList = () => {
             const data = await res.json();
             console.log(data)
             setProfile(data)
+            setMasterList(data)
         }
     }
     useEffect(() => {
@@ -53,10 +55,10 @@ const ProfileList = () => {
                         <div className="pt-5 text-base font-semibold leading-7">
                             <p>
                                 <Link
-                                   to={"/View/" + item._id}
+                                    to={"/Viewpage/" + item._id}
                                     className="text-sky-500 transition-all duration-300 group-hover:text-white"
                                 >
-                                   Learn more
+                                    Learn more
                                 </Link>
                             </p>
                         </div>
@@ -65,6 +67,19 @@ const ProfileList = () => {
             </div>
         ))
     }
+    const applysearch = (e) => {
+        const value = e.target.value;
+        setProfile(masterList.filter((profiles) => {
+            return (profiles.name.toLowerCase().includes(value.toLowerCase()));
+        }));
+    }
+    const filterbyCategory = (category) => {
+        console.log(category)
+        const filtercategory = masterList.filter(cat => cat.category.toLowerCase().includes(category.toLowerCase()));
+        setProducts(filtercategory)
+    }
+
+
     return (
         <div>
 
@@ -91,14 +106,27 @@ const ProfileList = () => {
                     >
                         <div className="relative mt-1">
                             <input
-                                type="text"
-                                id="password"
+                                type="search"
+                                id="default-search"
                                 className="w-full pl-3 pr-10 py-2 border-2 border-gray-200 rounded-xl hover:border-gray-300 focus:outline-none focus:border-blue-500 transition-colors"
-                                placeholder="Search..."
+                                placeholder="Search..." onChange={applysearch}
+
                             />
                             <button className="block w-7 h-7 text-center text-xl leading-0 absolute top-2 right-2 text-gray-400 focus:outline-none hover:text-gray-900 transition-colors">
                                 <i className="mdi mdi-magnify" />
                             </button>
+
+                            <div className='flex justify-evenly mt-5'>
+                                <button className="bg-blue-900 hover:bg-blue-700 text-white font-bold hover:text-white py-2 px-4 border border-black-500 hover:border-black rounded"
+                                    id="DigitalMarketing" onClick={(e) => filterbyCategory("DigitalMarketing")}>
+                                    Digital Marketing
+                                </button>
+                                <button className="bg-blue-900 hover:bg-blue-700 text-white font-bold hover:text-white py-2 px-4 border border-black-500 hover:border-black rounded"
+                                    id="IT" onClick={(e) => filterbyCategory("IT")}>IT</button>
+                                <button className="bg-blue-900 hover:bg-blue-700 text-white font-bold hover:text-white py-2 px-4 border border-black-500 hover:border-black rounded"
+                                    id="Management" onClick={(e) => filterbyCategory("Management")}>Management</button>
+                            </div>
+
                         </div>
                         <div className="absolute top-0 left-0 w-full h-2 flex">
                             <div className="h-2 bg-blue-500 flex-1" />
