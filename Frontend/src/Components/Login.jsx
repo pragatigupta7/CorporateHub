@@ -1,7 +1,7 @@
 import React from 'react'
-import logo from "../assets/Logo-removebg-preview.png"
+
 import { Link, useNavigate } from 'react-router-dom'
-import login from "../assets/login1.png"
+
 import useUserContext from '../UserContext'
 import { enqueueSnackbar } from 'notistack';
 import { useFormik } from 'formik'
@@ -52,7 +52,6 @@ const Login = () => {
 
     validationSchema: LoginSchema
   })
-
   return (
     <div>
       <>
@@ -81,25 +80,25 @@ const Login = () => {
                 className="absolute triangle  min-h-screen right-0 w-16"
                 style={{}}
               />
-              <Link
-                to="https://codepen.io/uidesignhub"
-                target="_blank"
-                title="codepen aji"
-                className="flex absolute top-5 text-center text-gray-100 focus:outline-none"
-              >
-                <img
-                  src={logo}
-                  alt="aji"
-                  className="object-cover mx-auto w-8 h-8 rounded-full w-10 h-10"
-                />
-                <p className="text-xl ml-3">
-                  Corporate<strong>Hub</strong>
-                </p>{" "}
-              </Link>
-              <img
-                src={login}
-                className="h-96 absolute right-5 mr-5"
-              />
+              {/*<Link
+                  to="https://codepen.io/uidesignhub"
+                  target="_blank"
+                  title="codepen aji"
+                  className="flex absolute top-5 text-center text-gray-100 focus:outline-none"
+                >
+                  <img
+                    src={logo}
+                    alt="aji"
+                    className="object-cover mx-auto w-8 h-8 rounded-full w-10 h-10"
+                  />
+                  <p className="text-xl ml-3">
+                    Corporate<strong>Hub</strong>
+                  </p>{" "}
+              </Link>*/}
+              {/*<img
+                  src={login}
+                  className="h-96 absolute right-5 mr-5"
+            />*/}
               <div className="w-full  max-w-md z-10">
                 <div className="sm:text-4xl xl:text-5xl font-bold leading-tight mb-6">
                   Your Gateway to Innovation and Collaboration
