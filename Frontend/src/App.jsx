@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Components/Home'
 import Signup from './Components/Signup'
 import Login from './Components/Login'
@@ -21,42 +21,42 @@ import Dashboard from './Components/Admin/dashboard'
 const App = () => {
   return (
     <div>
-          <SnackbarProvider>
-      <BrowserRouter>
-      <Navbar/>
-      <UserProvider>
-      <Routes>
-      <Route path='/' element={<Home2 />}/> 
-      <Route path='/Signup' element={<Signup/>}/> 
-      <Route path='/Login' element={<Login/>}/>
-      <Route path='/Home' element={<Home/>}/>
-     
-      <Route path='/Contact' element={<Contact/>}/>
-      <Route path='/EditPage' element={<EditPage/>}/>
-      <Route path='/Signupp' element={<Signupp/>}/>
-      <Route path='/Features' element={<Features/>}/>
-      <Route path='/About' element={<About/>}/>
-      <Route path='/Addprofile' element={<Addprofile/>}/>
-      <Route path='/Home2' element={<Home2/>}/>
-      <Route path='/Manageuser' element={<Manageuser/>}/>
-      <Route path='/ManageProfiles' element={<ManageProfiles/>}/>
-      <Route path='/ProfileList' element={<ProfileList/>}/>
-      <Route path='/View/:id' element={<View/>} />
-      <Route path='Dashboard' element={<Dashboard/>} />
+      <SnackbarProvider>
+        <BrowserRouter>
+          <Navbar />
+          <UserProvider>
+            <Routes>
+              <Route path='/' element={<Home2 />} />
+              <Route path='/Signup' element={<Signup />} />
+              <Route path='/Login' element={<Login />} />
+              <Route path='/Home' element={<Home />} />
+
+              <Route path='/Contact' element={<Contact />} />
+              <Route path='/EditPage' element={<EditPage />} />
+              <Route path='/Signupp' element={<Signupp />} />
+              <Route path='/Features' element={<Features />} />
+              <Route path='/About' element={<About />} />
+              <Route path='/Addprofile' element={<Addprofile />} />
+              <Route path='/Home2' element={<Home2 />} />
+              <Route path='/Manageuser' element={<Manageuser />} />
+              <Route path='/ManageProfiles' element={<ManageProfiles />} />
+              <Route path='/ProfileList' element={<ProfileList />} />
+              <Route path='/View/:id' element={<View />} />
+              <Route path='Dashboard' element={<Dashboard />} />
 
 
-      <Route path='/Admin' element={<Admin/>}>
-      <Route path='dashboard' element={<Dashboard/>} />
+              <Route path='/Admin' element={<Admin />}>
+                <Route path='dashboard' element={<Dashboard />} />
 
-      </Route>
+              </Route>
 
 
 
-     
-      </Routes>
-      </UserProvider>
 
-      </BrowserRouter>
+            </Routes>
+          </UserProvider>
+
+        </BrowserRouter>
       </SnackbarProvider>
     </div>
   )
