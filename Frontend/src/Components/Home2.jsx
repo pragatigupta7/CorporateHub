@@ -4,6 +4,7 @@ import comm from "../assets/community.png"
 import mission from "../assets/mission.png"
 import pop from "../assets/pop.png"
 import vision from "../assets/vision.png"
+import {Link} from 'react-router-dom'
 
 const Home2 = () => {
   const [open, setOpen] = useState(false)
@@ -11,7 +12,7 @@ const Home2 = () => {
   return (
     <>
       <div className='shadow-md sticky top-0 z-[20] mx-auto w-full '>
-        <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
+        {/* <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'> */}
           <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800'>
 
             {/*} <h1 className='font-[cursive] relative text-transparent bg-clip-text bg-gradient-to-r from-blue-500  to-pink-500'>FIT FUSION</h1>*/}
@@ -21,7 +22,7 @@ const Home2 = () => {
 
           </div>
 
-        </div>
+        {/* </div> */}
 
 
       </div>
@@ -39,9 +40,9 @@ const Home2 = () => {
             /></p>
           <ul >
 
-            <button className='bg-indigo-600 text-white font-[Poppins] py-2 px-6 rounded md:ml-8 hover:bg-indigo-500 duration-500 md:my-0 my-7'>
+            <Link to='/ProfileList' className='bg-indigo-600 text-white font-[Poppins] py-2 px-6 rounded md:ml-8 hover:bg-indigo-500 duration-500 md:my-0 my-7'>
               Get Started
-            </button>
+            </Link>
           </ul>
         </div>
       </div>
