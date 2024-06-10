@@ -22,6 +22,8 @@ import EditPage from './Components/EditPage'
 import Viewpage from './Components/Viewpage'
 import Button from './Components/Button'
 import Forgot from './Components/Forgot'
+import Sidebar from './Components/Sidebar'
+
 
 const App = () => {
   return (
@@ -51,6 +53,8 @@ const App = () => {
       <Route path='/Viewpage/:id' element={<Viewpage/>} />
       <Route path='/Button' element={<Button/>} />
       <Route path="Forgot" element={<Forgot/>} />
+      <Route path="Sidebar" element={<Sidebar/>} />
+      
 
 
       <Route path='/Admin' element={<Admin/>}>

@@ -130,7 +130,7 @@ const Dashboard = () => {
         >
           <i className="bx bx-bell mr-3 text-lg" />
           <span className="text-sm">Notifications</span>
-          <span className=" md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-600 bg-red-200 rounded-full">
+          <span className="md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-600 bg-red-200 rounded-full">
             5
           </span>
         </a>

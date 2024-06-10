@@ -4,6 +4,7 @@ import comm from "../assets/community.png"
 import mission from "../assets/mission.png"
 import pop from "../assets/pop.png"
 import vision from "../assets/vision.png"
+import bgvideo from "../assets/video.mp4"
 
 const Home2 = () => {
   const [open, setOpen] = useState(false)
@@ -25,10 +26,15 @@ const Home2 = () => {
 
 
       </div>
-      <div className='bg-[url(https://sadiracapitalllc.com/wp-content/uploads/2022/04/atlanta-financial-center-mark-chandler-e1650643630483.jpg)] bg-cover bg-no-repeat bg-scroll   h-[500px] md:h-[700px]'>
-        <div className='text-center text-white py-[120px] '>
-          <h1 className='font-serif text-2xl md:text-5xl mt-16'>Corporate Hub</h1>
-          <h2 className='font-bold text-3xl md:text-4xl my-2'>Empowering Innovation, Connecting Success</h2>
+     {/*} <div className='bg-[url(https://sadiracapitalllc.com/wp-content/uploads/2022/04/atlanta-financial-center-mark-chandler-e1650643630483.jpg)] bg-cover bg-no-repeat bg-scroll   h-[500px] md:h-[700px]'>*/}
+    <div className='overflow-x-hidden'> <video className="h-screen w-screen rounded-lg object-cover absolute -z-10" controls autoPlay muted >
+      <source src={bgvideo} type="video/mp4" />
+          
+     
+    </video>
+    <div className='text-center text-white py-[120px] '>
+    <h1 className='font-serif text-2xl md:text-5xl mt-16'>Corporate Hub</h1>
+          <h2 className='font-bold text-3xl md:text-4xl my-2 '>Empowering Innovation, Connecting Success</h2>
           <p className='text-2xl md:text-3xl my-4 '>
             <ReactTyped
               className='pl-3'
@@ -38,12 +44,12 @@ const Home2 = () => {
               loop={true}
             /></p>
           <ul >
-
-            <button className='bg-indigo-600 text-white font-[Poppins] py-2 px-6 rounded md:ml-8 hover:bg-indigo-500 duration-500 md:my-0 my-7'>
+            <button className='bg-indigo-600 text-white font-[Poppins] py-2 px-6 rounded md:ml-8 hover:bg-indigo-500 duration-500 md:my-0 my-7 '>
               Get Started
             </button>
           </ul>
         </div>
+        
       </div>
       <section className="bg-dark">
         <div className="py-12 bg-white">
