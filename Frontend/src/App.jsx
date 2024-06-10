@@ -21,6 +21,7 @@ import Dashboard from './Components/Admin/dashboard'
 import EditPage from './Components/EditPage'
 import Viewpage from './Components/Viewpage'
 import Button from './Components/Button'
+import Forgot from './Components/Forgot'
 
 const App = () => {
   return (
@@ -49,6 +50,7 @@ const App = () => {
       <Route path='/Dashboard' element={<Dashboard/>} />
       <Route path='/Viewpage/:id' element={<Viewpage/>} />
       <Route path='/Button' element={<Button/>} />
+      <Route path="Forgot" element={<Forgot/>} />
 
 
       <Route path='/Admin' element={<Admin/>}>

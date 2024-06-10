@@ -203,7 +203,7 @@ const Login = () => {
                       </label>
                     </div>
                     <div className="text-sm">
-                      <Link to="#" className="text-indigo-400 hover:text-blue-500">
+                      <Link to="/Forgot" className="text-indigo-400 hover:text-blue-500">
                         Forgot your password?
                       </Link>
                     </div>
