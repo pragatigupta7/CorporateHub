@@ -22,7 +22,7 @@ const ProfileList = () => {
     const displayProfile = () => {
         return profiles.map((item) => (
 
-            <div className=" relative flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12 grid grid-cols-4">
+            <div className=" relative flex-col justify-center overflow-hidden  py-6 sm:py-12 grid grid-cols-4">
                 <div className="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
                     <span className="absolute  top-10 z-0 h-20 w-20 rounded-full bg-blue-950 transition-all duration-300 group-hover:scale-[10]" />
                     <div className="relative z-10 mx-auto max-w-md">
@@ -164,7 +164,7 @@ const ProfileList = () => {
             <div className="relative overflow-hidden bg-gray-100 ">
                 <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-20">
                     <div className="text-center">
-                        <h1 className="text-4xl sm:text-6xl font-bold text-gray-800 dark:text-neutral-200">
+                        <h1 className="text-4xl sm:text-6xl font-bold ">
                             Search
                         </h1>
                         <p className="mt-3 text-gray-600 dark:text-neutral-400">
@@ -184,7 +184,7 @@ const ProfileList = () => {
                                         <input
                                             type="email"
                                             onChange={applysearch}
-                                            className="py-2.5 px-4 block w-full border-transparent rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                                            className="py-2.5 px-4 block w-full border-transparent rounded-lg  dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
                                             placeholder="Search article"
                                         />
                                     </div>
@@ -400,7 +400,7 @@ const ProfileList = () => {
                 </div>
             </div>
 
-            <div className="container ">
+            <div className="container mx-auto ">
                 <div className="grid grid-cols-4 ">
                     {displayProfile()}
                 </div>
