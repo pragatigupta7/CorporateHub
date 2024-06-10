@@ -31,7 +31,7 @@ const ProfileList = () => {
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                strokeWidth="1.5"
+                                strokeWidth="1.5"   
                                 stroke="currentColor"
                                 className="h-10 w-10 text-white transition-all"
                             >
@@ -42,10 +42,10 @@ const ProfileList = () => {
                                 />
                             </svg>
                         </span>
-                        <h4 className="text-2xl font-bold dark:text-black group-hover:text-white">    {item.name}</h4>
-                        <div className="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
+                        <h4 className="text-2xl font-bold dark:text-black group-hover:text-white mt-3">    {item.name}</h4>
+                        <div className="space-y-6  text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
                             <p className="dark:text-black group-hover:text-white">
-                                {item.email}
+                                {item.category}
                             </p>
                         </div>
                         <div className="pt-5 text-base font-semibold leading-7">
@@ -179,13 +179,13 @@ const ProfileList = () => {
                                             htmlFor="hs-search-article-1"
                                             className="block text-sm text-gray-700 font-medium dark:text-white"
                                         >
-                                            <span className="sr-only">Search article</span>
+                                            {/* <span className="sr-only">Search article</span> */}
                                         </label>
                                         <input
                                             type="email"
                                             onChange={applysearch}
                                             className="py-2.5 px-4 block w-full border-transparent rounded-lg  dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                            placeholder="Search article"
+                                            placeholder="Search Company Profiles"
                                         />
                                     </div>
                                     <div className="flex-[0_0_auto] ">
@@ -265,7 +265,7 @@ const ProfileList = () => {
                             {/* End SVG Element */}
                         </div>
                         <div className="mt-10 sm:mt-20">
-                            <a
+                            <Link onClick={(e) => filterbyCategory("Hospital")}
                                 className="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800"
                                 href="#"
                             >
@@ -285,8 +285,8 @@ const ProfileList = () => {
                                     <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
                                 </svg>
                                 Hospitals
-                            </a>
-                            <a
+                            </Link>
+                            <Link onClick={(e) => filterbyCategory("Cafe")}
                                 className="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800"
                                 href="#"
                             >
@@ -306,8 +306,8 @@ const ProfileList = () => {
                                     <circle cx={12} cy={12} r={3} />
                                 </svg>
                                 Cafe's
-                            </a>
-                            <a
+                            </Link>
+                            <Link onClick={(e) => filterbyCategory("IT")}
                                 className="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800"
                                 href="#"
                             >
@@ -325,9 +325,9 @@ const ProfileList = () => {
                                 >
                                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
                                 </svg>
-                                Hospital
-                            </a>
-                            <a
+                                IT
+                            </Link>
+                            <Link onClick={(e) => filterbyCategory("Management")}
                                 className="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800"
                                 href="#"
                             >
@@ -347,9 +347,9 @@ const ProfileList = () => {
                                     <path d="M9 18h6" />
                                     <path d="M10 22h4" />
                                 </svg>
-                                School's
-                            </a>
-                            <a
+                                Digital Marketing
+                            </Link>
+                            <Link onClick={(e) => filterbyCategory("IT")}
                                 className="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800"
                                 href="#"
                             >
@@ -373,9 +373,9 @@ const ProfileList = () => {
                                     <path d="M10 14h4" />
                                     <path d="M10 18h4" />
                                 </svg>
-                                Apartment
-                            </a>
-                            <a
+                                IT/DM
+                            </Link>
+                            <Link onClick={(e) => filterbyCategory("Hotel")}
                                 className="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800"
                                 href="#"
                             >
@@ -394,7 +394,7 @@ const ProfileList = () => {
                                     <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
                                 </svg>
                                 Hotel
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

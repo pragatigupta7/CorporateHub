@@ -1,10 +1,12 @@
 import { Formik } from 'formik';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 import { enqueueSnackbar } from 'notistack';
 import logo from "../assets/Logo-removebg-preview.png"
 
 
 const EditPage = () => {
+  const navigate = useNavigate();
 
   const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
   console.log(currentUser);
@@ -90,6 +92,7 @@ const EditPage = () => {
             .then((result) => {
               console.log(result);
               updateUser({ profile: result._id })
+              // navigate('/ProfileList')
             })
         } else {
           toast.error('Something went wrong');
@@ -119,12 +122,8 @@ const EditPage = () => {
                   <p className="mt-4 sm:px-32 text-[#10172A] sm:text-xl text-sm font-semibold tracking-tighter">
                     by @PragatiGupta 🏝️
                   </p>
-                  <p className="sm:mt-8 mt-3 sm:px-44 text-[#10172A] text-4xl sm:text-6xl font-semibold tracking-tighter">
-                    Welcome To
-                    <span className="underline leading-8 underline-offset-8	decoration-8 decoration-[rgb(92,115,246)]">
-                      our
-                    </span>{" "}
-                    Corporate Hub
+                  <p className="sm:mt-8 mt-3 sm:px-44 text-[#10172A] text-4xl sm:text-7xl font-semibold tracking-tighter">
+                    Welcome To Our Corporate Hub
                   </p>
                   <p className="sm:mt-8 mt-2.5 text-[#10172A] sm:px-72  sm:leading-loose text-lg font-normal tracking-tighter">
                     Showcase Your Company, Connect with Excellence: Join Our Corporate Hub Today!
@@ -175,11 +174,11 @@ const EditPage = () => {
                       {/* End Col */}
                       <div className="sm:col-span-9">
                         <div className="flex justify-center gap-5">
-                          <img
+                          {/* <img
                             className="inline-block size-16 rounded-full ring-2 ring-white dark:ring-neutral-900"
-                            src="../assets/img/160x160/img1.jpg"
+                            src={"http://localhost:5000/" + profile.logo}
                             alt="Image Description"
-                          />
+                          /> */}
                           <div className="flex gap-x-2 ">
                             <div>
                               <label
@@ -239,7 +238,7 @@ const EditPage = () => {
                             id="category"
                             onChange={handleChange}
                             value={values.category}
-                            type="name"
+                            type="text"
                             className="py-2 px-3 pe-11 w-full  border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500  "
                             placeholder="category"
                           />

@@ -4,7 +4,6 @@ import Home from './Components/Home'
 import Signup from './Components/Signup'
 import Login from './Components/Login'
 import Navbar from './Components/Navbar'
-import { UserProvider } from '../src/UserContext'
 import { SnackbarProvider } from 'notistack'
 import Contact from './Components/Contact'
 import Signupp from './Components/Signupp'
@@ -22,14 +21,16 @@ import Forgot from './Components/Forgot'
 import Dashboard from './Components/Admin/Dashboard'
 import Manageuser from './Components/Admin/Manageuser'
 import ManageProfiles from './Components/Admin/ManageProfiles'
+import AdminAuth from './AdminAuth'
+import { AppProvider } from './AppContext'
 
 const App = () => {
   return (
     <div>
       <SnackbarProvider>
         <BrowserRouter>
+          <AppProvider>
           <Navbar />
-          <UserProvider>
             <Routes>
               <Route path='/' element={<Home2 />} />
               <Route path='/Signup' element={<Signup />} />
@@ -62,7 +63,7 @@ const App = () => {
 
 
             </Routes>
-          </UserProvider>
+          </AppProvider>
 
         </BrowserRouter>
       </SnackbarProvider>

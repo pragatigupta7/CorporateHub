@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Link, useNavigate } from 'react-router-dom'
 
-import useUserContext from '../UserContext'
+import useAppContext from '../AppContext'
 import { enqueueSnackbar } from 'notistack';
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
@@ -19,7 +19,7 @@ const LoginSchema = Yup.object().shape({
 const Login = () => {
   const Navigate = useNavigate();
   //logout
-  const { setLoggedIn } = useUserContext();
+  const { setLoggedIn } = useAppContext();
   //logout
   // step 1: formik initialization
   const loginForm = useFormik({
@@ -44,10 +44,24 @@ const Login = () => {
         setLoggedIn(true);
         const data = await res.json();
         console.log(data);  //to save user data in sesson ,inbuilt api-sessionstorage
-        sessionStorage.setItem('user', JSON.stringify(data))
-        Navigate('/EditPage')
-
+        sessionStorage.setItem('isloggedin', true)
+        if (data.role === 'Admin') {
+          sessionStorage.setItem('Admin', JSON.stringify(data));
+          Navigate('/Admin/Dashboard');
+      } else {
+          sessionStorage.setItem('user', JSON.stringify(data));
+          Navigate('/EditPage');
       }
+
+      }else if (res.status === 400
+            ) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Login Failed',
+                    text: 'Invalid email or password'
+
+                })
+            }
     },
 
     validationSchema: LoginSchema

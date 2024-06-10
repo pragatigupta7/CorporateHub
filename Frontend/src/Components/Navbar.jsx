@@ -1,8 +1,54 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import logo from "../assets/Logo-removebg-preview.png"
+import useAppContext from '../AppContext'
 
 const Navbar = () => {
+  const isLoggedIn = sessionStorage.getItem('user');
+  const [currentUser, setCurrentUser] = useState(null);
+
+  const { logout, loggedIn, setLoggedIn } = useAppContext();
+
+  console.log(isLoggedIn);
+
+
+  const showLoginOption = () => {
+
+    if (isLoggedIn) {
+      return (
+        // <button type="submit" className='login-container' >
+        // <div className="dropdown">
+        //   <button className="dropbtn login-container" >{currentUser.}</button>
+        //   <div className="dropdown-content">
+        <button className="login-container btn" style={{ color: 'red' }} onClick={logout} >
+          Logout
+        </button>
+
+        //   </div>
+        // </div>
+      )
+    }
+    else {
+      return (
+        <div className='flex'>
+          <Link
+            to="/Signupp"
+            className="block text-md px-4 py-2 rounded text-blue-700 ml-2 font-bold hover:text-white mt-4 hover:bg-blue-700 lg:mt-0"
+          >
+            Sign in
+          </Link>
+          <Link
+            to="/Login"
+            className=" block text-md px-4  ml-2 py-2 rounded text-blue-700 font-bold hover:text-white mt-4 hover:bg-blue-700 lg:mt-0"
+          >
+            login
+          </Link>
+        </div>
+      )
+    }
+  }
+
+  console.log(isLoggedIn);
   return (
     <div>
       <>
@@ -59,23 +105,12 @@ const Navbar = () => {
               >
                 Contact
               </Link>
-             
+
             </div>
-            
-            <div className="flex ">
-              <Link
-                to="/Signupp"
-                className="block text-md px-4 py-2 rounded text-blue-700 ml-2 font-bold hover:text-white mt-4 hover:bg-blue-700 lg:mt-0"
-              >
-                Sign in
-              </Link>
-              <Link
-                to="/Login"
-                className=" block text-md px-4  ml-2 py-2 rounded text-blue-700 font-bold hover:text-white mt-4 hover:bg-blue-700 lg:mt-0"
-              >
-                login
-              </Link>
-            </div>
+
+      
+              {showLoginOption()}
+          
           </div>
         </nav>
       </>
