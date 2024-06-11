@@ -1,7 +1,7 @@
 const {Schema,model, Types}=require('../connection')
 const userSchema = new Schema({
     name : {type : String, require: true},
-    email:String,
+    email:{type : String, unique : true},
     password:String,
     confirmpassword:String,
     profile: { type : Types.ObjectId, ref: 'profile' },
