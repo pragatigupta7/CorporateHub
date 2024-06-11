@@ -1345,12 +1345,6 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboardimport React from 'react'
 
-const Dashboard = () => {
-  return (
-    <div>Dashboard</div>
-  )
-}
 
 export default Dashboard

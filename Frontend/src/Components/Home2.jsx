@@ -5,6 +5,7 @@ import mission from "../assets/mission.png"
 import pop from "../assets/pop.png"
 import vision from "../assets/vision.png"
 import {Link} from 'react-router-dom'
+import bgvideo from '../assets/video.mp4'
 
 const Home2 = () => {
   const [open, setOpen] = useState(false)
@@ -247,8 +248,83 @@ const Home2 = () => {
           </section>
         </div>
       </>
+      <>
+  
+  <div class="flex min-h-screen items-center justify-center bg-blue-100 max-w-7xl mx-auto p-8 shadow-lg m-20"> 
+  <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+    <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+    
+      <div className="h-96 w-72">
+       
+        <img
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+          src="https://syons.in/img/digital-marketing-services-in-vizag-hyderabad.jpg"
+          alt=""
+        />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70" />
+      <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+        <h1 className="font-dmserif text-3xl font-bold text-white">Digital Marketing</h1>
+        <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+          dolore adipisci placeat.
+        </p>
+        <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+          See More
+        </button>
+      </div>
+    </div>
+    <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+      <div className="h-96 w-72">
+        <img
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+          src="https://i0.wp.com/www.2scaleup.com/wp-content/uploads/2019/01/stockvault-information-technology-concept174322.jpg?w=2900&ssl=1"
+          alt=""
+        />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70" />
+      <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+        <h1 className="font-dmserif text-3xl font-bold text-white">
+          Infomation Technology
+        </h1>
+        <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+          dolore adipisci placeat.
+        </p>
+        <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+          See More
+        </button>
+      </div>
+    </div>
+    <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+      <div className="h-96 w-72">
+        <img
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+          src="https://th.bing.com/th/id/OIP.LNSckkTCZSrZCg36aCN_BAHaGJ?w=820&h=681&rs=1&pid=ImgDetMain"
+          alt=""
+        />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70" />
+      <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+        <h1 className="font-dmserif text-3xl font-bold text-white">
+          Social Media
+        </h1>
+        <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+          dolore adipisci placeat.
+        </p>
+        <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+          See More
+        </button>
+      </div>
+    </div>
+  </div>
 
-      <div className='md:py-[100px] px-3'>
+  </div>;
+</>
+
+
+      {/*<div className='md:py-[100px] px-3'>
         <h1 className=" title-font  mb-4 text-4xl font-extrabold leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-6xl text-center">Some Fields Are</h1>
         <div className='max-w-[1050px] mx-auto md:grid grid-cols-3 gap-6'>
           <div className='shadow-xl bg-blue-100 h-[400px] hover:scale-105 duration-500 my-4 rounded-xl text-center p-3'>
@@ -268,7 +344,7 @@ const Home2 = () => {
 
           </div>
         </div>
-      </div>
+      </div>*/}
       <div className="py-4 bg-white">
         <div className="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
           <div className="text-center">
@@ -304,17 +380,14 @@ const Home2 = () => {
                   </div>
                   <div className="bg-gray-100 p-5 px-10 w-full flex items-center">
                     <h4 className="text-md leading-6 font-medium text-gray-900">
-                      What could possibly be your first question?
+                    How do I join or create a project team?
                     </h4>
                   </div>
                 </div>
                 <div className="flex flex-row items-start">
                   <div className="bg-indigo-100 p-5 px-10 w-full flex items-center">
                     <p className="text-gray-700 text-sm">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Maiores impedit perferendis suscipit eaque, iste dolor
-                      cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet
-                      consectetur adipisicing elit.
+                    Navigate to the "Projects" section and follow the instructions to join existing teams or create new ones.
                     </p>
                   </div>
                   <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
@@ -391,17 +464,14 @@ const Home2 = () => {
                   </div>
                   <div className="bg-gray-100 p-5 px-10 w-full flex items-center">
                     <h4 className="text-md leading-6 font-medium text-gray-900">
-                      What could possibly be your first question?
+                    How is my data protected on the corporate hub?
                     </h4>
                   </div>
                 </div>
                 <div className="flex flex-row items-start">
                   <div className="bg-indigo-100 p-5 px-10 w-full flex items-center">
                     <p className="text-gray-700 text-sm">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Maiores impedit perferendis suscipit eaque, iste dolor
-                      cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet
-                      consectetur adipisicing elit.
+                    We employ robust security measures, including encryption and regular audits, to protect your data. Detailed information can be found in our Privacy Policy.
                     </p>
                   </div>
                   <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
@@ -478,17 +548,14 @@ const Home2 = () => {
                   </div>
                   <div className="bg-gray-100 p-5 px-10 w-full flex items-center">
                     <h4 className="text-md leading-6 font-medium text-gray-900">
-                      What could possibly be your first question?
+                    How do I update my profile information?
                     </h4>
                   </div>
                 </div>
                 <div className="flex flex-row items-start">
                   <div className="bg-indigo-100 p-5 px-10 w-full flex items-center">
                     <p className="text-gray-700 text-sm">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Maiores impedit perferendis suscipit eaque, iste dolor
-                      cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet
-                      consectetur adipisicing elit.
+                    After logging in, go to the "Profile" section under your account settings to update your personal and professional details.
                     </p>
                   </div>
                   <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">

@@ -1,8 +1,6 @@
 import React from 'react'
-import logo from "../assets/Logo-removebg-preview.png"
 import { Link, useNavigate  } from 'react-router-dom'
 import { useFormik } from 'formik'
-import login from "../assets/login1.png"
 import * as Yup from 'yup'
 import { enqueueSnackbar } from 'notistack'
 
@@ -19,8 +17,6 @@ const SignupSchema = Yup.object().shape({
         .min(8, 'Password must be at least 8 characters')
         .max(15, 'Password must be at most 15 characters')
 })
-
-
 const Signupp = () => {
     const Navigate = useNavigate();
     const signupForm = useFormik({
@@ -80,25 +76,6 @@ const Signupp = () => {
                                 className="absolute triangle  min-h-screen right-0 w-16"
                                 style={{}}
                             />
-                           {/*} <Link
-                                to="https://codepen.io/uidesignhub"
-                                target="_blank"
-                                title="codepen aji"
-                                className="flex absolute top-5 text-center text-gray-100 focus:outline-none"
-                            >
-                                <img
-                                    src={logo}
-                                    alt="aji"
-                                    className="object-cover mx-auto w-8 h-8 rounded-full w-10 h-10"
-                                />
-                                <p className="text-xl ml-3">
-                                    Corporate<strong>Hub</strong>
-                                </p>{" "}
-                            </Link>
-                           {/*} <img
-                                src={login}
-                                className="h-96 absolute right-5 mr-5"
-                        />*/}
                             <div className="w-full  max-w-md z-10">
                                 <div className="sm:text-4xl xl:text-5xl font-bold leading-tight mb-6">
                                 Innovate, Integrate, Succeed.
@@ -135,12 +112,6 @@ const Signupp = () => {
                                         Please register yourself
                                     </p>
                                 </div>
-
-                                {/*} <div className="flex items-center justify-center space-x-2">
-            <span className="h-px w-16 bg-gray-200" />
-            <span className="text-gray-300 font-normal">or continue with</span>
-            <span className="h-px w-16 bg-gray-200" />
-      </div>*/}
                                 <form className="mt-8 space-y-6" action="#" method="POST" onSubmit={signupForm.handleSubmit}>
                                     <input type="hidden" name="remember" defaultValue="true" />
                                     <div className="relative">
