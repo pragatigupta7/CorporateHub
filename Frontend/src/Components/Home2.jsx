@@ -28,7 +28,7 @@ const Home2 = () => {
       </div>
      {/*} <div className='bg-[url(https://sadiracapitalllc.com/wp-content/uploads/2022/04/atlanta-financial-center-mark-chandler-e1650643630483.jpg)] bg-cover bg-no-repeat bg-scroll   h-[500px] md:h-[700px]'>*/}
     <div className='overflow-x-hidden'> <video className="h-screen w-screen rounded-lg object-cover absolute -z-10" controls autoPlay muted >
-      <source src={bgvideo} type="video/mp4" />
+      {/* <source src={bgvideo} type="video/mp4" /> */}
           
      
     </video>
