@@ -6,6 +6,8 @@ import pop from "../assets/pop.png"
 import vision from "../assets/vision.png"
 import {Link} from 'react-router-dom'
 import bgvideo from '../assets/video.mp4'
+import features from '../assets/Features.mp4'
+
 
 const Home2 = () => {
   const [open, setOpen] = useState(false)
@@ -29,7 +31,7 @@ const Home2 = () => {
       </div>
      {/*} <div className='bg-[url(https://sadiracapitalllc.com/wp-content/uploads/2022/04/atlanta-financial-center-mark-chandler-e1650643630483.jpg)] bg-cover bg-no-repeat bg-scroll   h-[500px] md:h-[700px]'>*/}
     <div className='overflow-x-hidden'> <video className="h-screen w-screen rounded-lg object-cover absolute -z-10" controls autoPlay muted >
-      {/* <source src={bgvideo} type="video/mp4" /> */}
+       <source src={bgvideo} type="video/mp4" /> 
           
      
     </video>
@@ -139,7 +141,12 @@ const Home2 = () => {
         {/* This is an example component */}
         <link href="https://unpkg.com/pattern.css" rel="stylesheet" />
         <div>
-          <section className="text-gray-200 bg-blue-950">
+        <video className="h-screen w-screen rounded-lg object-cover absolute -z-10" controls autoPlay muted >
+       <source src={features} type="video/mp4" /> 
+          
+     
+    </video>
+          <section className="text-gray-200">
             <div className="max-w-6xl mx-auto px-5 py-24 ">
               <div className="text-center mb-20">
                 <h1 className=" title-font  mb-4 text-4xl font-extrabold leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-6xl">
@@ -612,7 +619,7 @@ const Home2 = () => {
       </div>
       <div className='bg-blue-950  mx-auto py-16 px-[2rem] grid lg:grid-cols-3 gap-8 text-white'>
         <div className='cursor-pointer hover:'>
-          <h1 className='w-full text-3xl font-bold hover:scale-105 duration-500'>Fit Fusion.</h1>
+          <h1 className='w-full text-3xl font-bold hover:scale-105 duration-500'>Corporate Hub</h1>
           <p className='py-4 hover:scale-105 duration-500'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id odit ullam iste repellat consequatur libero reiciendis, blanditiis accusantium.</p>
           <div className='flex justify-between md:w-[75%] my-6'>
             {/* <FaFacebookSquare size={30} />
