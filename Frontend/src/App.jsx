@@ -23,6 +23,8 @@ import Manageuser from './Components/Admin/Manageuser'
 import ManageProfiles from './Components/Admin/ManageProfiles'
 import AdminAuth from './AdminAuth'
 import { AppProvider } from './AppContext'
+import Feedback from './Components/Feedback'
+import UserProfile from './Components/UserProfile'
 
 const App = () => {
   return (
@@ -36,6 +38,7 @@ const App = () => {
               <Route path='/Signup' element={<Signup />} />
               <Route path='/Login' element={<Login />} />
               <Route path='/Home' element={<Home />} />
+              <Route path='/Feedback' element={<Feedback />} />
 
               <Route path='/Contact' element={<Contact />} />
               <Route path='/EditPage' element={<EditPage />} />
@@ -48,7 +51,9 @@ const App = () => {
               <Route path='/View/:id' element={<View />} />
               <Route path='/Viewpage/:id' element={<Viewpage />} />
               <Route path='/Button' element={<Button />} />
-              <Route path="Forgot" element={<Forgot />} />
+              <Route path="/Forgot" element={<Forgot />} />
+              <Route path="/UserProfile" element={<UserProfile />} />
+              
 
 
               <Route path='/Admin' element={<Admin />}>
