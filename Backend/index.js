@@ -7,6 +7,7 @@ const addprofileRouter =require('./Routers/addprofile');
 const contactRouter =require('./Routers/contact');
 const UtilRouter = require('./Routers/utils');
 const profileRouter = require('./Routers/profileRouter');
+const feedbackRouter = require('./Routers/feedbackRouter');
 
 app.use(cors({
     origin:['http://localhost:5173']
@@ -18,6 +19,7 @@ app.use('/addprofile',addprofileRouter);
 app.use('/contact',contactRouter)
 app.use('/util', UtilRouter);
 app.use('/profile', profileRouter);
+app.use('/feedback', feedbackRouter);
 app.use(express.static('./Uploads'));
 
 app.listen(port, ()=>{

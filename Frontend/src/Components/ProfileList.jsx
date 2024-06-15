@@ -5,6 +5,7 @@ const ProfileList = () => {
 
     const [profiles, setProfile] = useState([])
     const [masterList, setMasterList] = useState([]);
+    // const [products, setProducts] = useState([]);
 
     const fetchaddprofile = async () => {
         const res = await fetch('http://localhost:5000/profile/getall')
@@ -76,7 +77,7 @@ const ProfileList = () => {
     const filterbyCategory = (category) => {
         console.log(category)
         const filtercategory = masterList.filter(cat => cat.category.toLowerCase().includes(category.toLowerCase()));
-        setProducts(filtercategory)
+        setProfile(filtercategory)
     }
 
 
