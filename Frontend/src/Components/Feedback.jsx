@@ -8,7 +8,6 @@ const Feedback = () => {
 
     const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
     const [rating, setRating] = useState(4)
-
     const feedbackForm = useFormik({
         initialValues: {
             user: currentUser._id,
