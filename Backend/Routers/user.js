@@ -54,7 +54,7 @@ router.put('/update/:id', (req,res)=> {
     }).catch((err)=>{
         console.log(err);
         res.status(500).json(err)
-    });
+    });
 });
 router.get('/getuser/:id', (req,res)=> {                                          //forget          
     Model.findById(req.params.id)                                                                  //search sbkuch
@@ -63,7 +63,7 @@ router.get('/getuser/:id', (req,res)=> {                                        
     }).catch((err)=>{
         console.log(err);
         res.status(500).json(err)
-    });
+   });
 });
 router.delete("/delete/:id", (req,res) => {
     Model.findByIdAndDelete(req.params.id)

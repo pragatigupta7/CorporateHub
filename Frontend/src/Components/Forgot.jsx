@@ -3,7 +3,7 @@ import { enqueueSnackbar } from 'notistack';
 import React, { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom'
-import forget from "../assets/forget.png"
+
 
 const Forgot = () => {
 
@@ -17,9 +17,7 @@ const Forgot = () => {
 
     const checkMailExists = async () => {
         const res = await fetch(`http://localhost:5000/user/getbyemail/${emailRef.current.value}`);
-        // console.log(res.status);
         const data = await res.json();
-        // console.log(data);
         setVerifiedUser(data);
         return res.status === 200;
     }

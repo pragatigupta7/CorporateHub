@@ -19,8 +19,8 @@ router.post('/Uploadfile',uploader.single('myfile'),(req,res)=>{
 const mailConfig = {
     service : 'gmail',
     auth: {
-        user: "corporatehub40@gmail.com",
-        pass: "cfwienqtpsakuvhj",
+        user: "corporatehub105@gmail.com",
+        pass: "corporatehub123",
     }
  };
  const transporter = nodemailer.createTransport(mailConfig);

@@ -4,7 +4,7 @@ import { enqueueSnackbar } from 'notistack';
 
 const AdminAuth = ({children}) => {
 
-  const navigate = useNavigate();
+  const Navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(sessionStorage.getItem('admin'))
   );

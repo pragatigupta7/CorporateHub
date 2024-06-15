@@ -174,11 +174,11 @@ const EditPage = () => {
                       {/* End Col */}
                       <div className="sm:col-span-9">
                         <div className="flex justify-center gap-5">
-                          {/* <img
+                          <img
                             className="inline-block size-16 rounded-full ring-2 ring-white dark:ring-neutral-900"
-                            src={"http://localhost:5000/" + profile.logo}
+                            src={"http://localhost:5000/" + values.logo}
                             alt="Image Description"
-                          /> */}
+                          />
                           <div className="flex gap-x-2 ">
                             <div>
                               <label
