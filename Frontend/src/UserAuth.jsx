@@ -2,17 +2,17 @@ import React, { useEffect, useState } from 'react'
 import {Navigate, useNavigate} from 'react-router-dom';
 import { enqueueSnackbar } from 'notistack';
 
-const AdminAuth = ({children}) => {
+const UserAuth = ({children}) => {
 
   const navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState(
-    JSON.parse(sessionStorage.getItem('admin'))
+    JSON.parse(sessionStorage.getItem('user'))
   );
 
   if(currentUser!==null){
     return children;
   }else{
-    enqueueSnackbar("Please login as Admin", { variant: 'error' });
+    enqueueSnackbar("Please login as User", { variant: 'error' });
     return <Navigate to="/login" />
   }
   
@@ -20,4 +20,4 @@ const AdminAuth = ({children}) => {
 
 }
 
-export default AdminAuth;
+export default UserAuth;

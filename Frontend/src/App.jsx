@@ -21,10 +21,11 @@ import Forgot from './Components/Forgot'
 import Dashboard from './Components/Admin/dashboard'
 import Manageuser from './Components/Admin/Manageuser'
 import ManageProfiles from './Components/Admin/ManageProfiles'
-import AdminAuth from './AdminAuth'
 import { AppProvider } from './AppContext'
 import Feedback from './Components/Feedback'
 import UserProfile from './Components/UserProfile'
+import AdminAuth from './AdminAuth'
+import UserAuth from './UserAuth'
 
 const App = () => {
   return (
@@ -38,9 +39,9 @@ const App = () => {
               <Route path='/Signup' element={<Signup />} />
               <Route path='/Login' element={<Login />} />
               <Route path='/Home' element={<Home />} />
-              <Route path='/Feedback' element={<Feedback />} />
+              <Route path='/Feedback' element={<UserAuth><Feedback /></UserAuth>} />
 
-              <Route path='/Contact' element={<Contact />} />
+              <Route path='/Contact' element={<UserAuth><Contact /></UserAuth>} />
               <Route path='/EditPage' element={<EditPage />} />
               <Route path='/Signupp' element={<Signupp />} />
               <Route path='/Features' element={<Features />} />
@@ -49,14 +50,14 @@ const App = () => {
               <Route path='/Home2' element={<Home2 />} />
               <Route path='/ProfileList' element={<ProfileList />} />
               <Route path='/View/:id' element={<View />} />
-              <Route path='/Viewpage/:id' element={<Viewpage />} />
+              <Route path='/Viewpage/:id' element={<UserAuth><Viewpage /></UserAuth>} />
               <Route path='/Button' element={<Button />} />
               <Route path="/Forgot" element={<Forgot />} />
               <Route path="/UserProfile" element={<UserProfile />} />
               
 
 
-              <Route path='/Admin' element={<Admin />}>
+              <Route path='/Admin' element={<AdminAuth><Admin /></AdminAuth>}>
                 <Route path='dashboard' element={<Dashboard />} />
                 <Route path='Manageuser' element={<Manageuser />} />
                 <Route path='ManageProfiles' element={<ManageProfiles />} />
