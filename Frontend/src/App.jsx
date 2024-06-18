@@ -57,7 +57,7 @@ const App = () => {
               
 
 
-              <Route path='/Admin' element={<AdminAuth><Admin /></AdminAuth>}>
+              <Route path='/Admin' element={<Admin />}>
                 <Route path='dashboard' element={<Dashboard />} />
                 <Route path='Manageuser' element={<Manageuser />} />
                 <Route path='ManageProfiles' element={<ManageProfiles />} />

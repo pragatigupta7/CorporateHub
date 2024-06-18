@@ -34,7 +34,7 @@ router.get('/getbyid/:id', (req, res) => {
 });
 
 router.put('/update/:id', (req, res) => {
-    console.log(req.body);
+    console.log(req.body, req.params.id);
     Model.findByIdAndUpdate(req.params.id, req.body, {new: true})
         .then((result) => {
             res.status(200).json(result);
