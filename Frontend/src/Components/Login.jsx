@@ -48,7 +48,7 @@ const Login = () => {
           Navigate('/Admin/Dashboard');
       } else {
           sessionStorage.setItem('user', JSON.stringify(data));
-          Navigate('/');
+          Navigate('/EditPage');
       }
 
       }else if (res.status === 400
