@@ -107,6 +107,12 @@ const Navbar = () => {
               >
                 Contact
               </Link>
+              <Link
+                to="/EditPage"
+                className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2"
+              >
+                Add Company Profile
+              </Link>
 
             </div>
 

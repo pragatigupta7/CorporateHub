@@ -92,7 +92,7 @@ const EditPage = () => {
             .then((result) => {
               console.log(result);
               updateUser({ profile: result._id })
-              // navigate('/ProfileList')
+               navigate('/ProfileList')
             })
         } else {
           toast.error('Something went wrong');

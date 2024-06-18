@@ -32,7 +32,7 @@ const Home2 = () => {
 
   const displayFeedbacks = () => {
     return feedbackList.map((feedback) => (
-      <div className="flex flex-col items-center gap-4 sm:px-4 md:gap-6 lg:px-8">
+      <div className="flex flex-col  text-white items-center gap-4 sm:px-4 md:gap-6 lg:px-8 bg-blue-900">
         <StarRatings
           rating={feedback.rating}
           starRatedColor="yellow"
@@ -40,15 +40,16 @@ const Home2 = () => {
           starDimension="30px"
           starSpacing="15px"
         />
-        <div className="text-center text-gray-600">
+        <div className="text-center text-white">
           {feedback.feedback}
         </div>
         <div className="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
-          <div className="text-center text-gray-600">
+          <div className="text-center text-white">
             {feedback.name}
           </div>
+         
           <div>
-            <div className="text-center text-sm font-bold text-indigo-500 sm:text-left md:text-base">
+            <div className="text-center text-sm font-bold text-white sm:text-left md:text-base">
               {feedback.user.name}
 
             </div>
@@ -320,9 +321,7 @@ const Home2 = () => {
                 <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
                   <h1 className="font-dmserif text-3xl font-bold text-white">Digital Marketing</h1>
                   <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-                    dolore adipisci placeat.
-                  </p>
+                    Digital marketing, or online marketing, is a form of advertising that uses the internet and digital technologies to connect with customers. </p>
                   <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                     See More
                   </button>
@@ -342,8 +341,7 @@ const Home2 = () => {
                     Infomation Technology
                   </h1>
                   <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-                    dolore adipisci placeat.
+                    Information technology (IT) is the use of computers, storage, networking and other physical devices, infrastructure and processes to create, process, store, secure and exchange all forms of electronic data.
                   </p>
                   <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                     See More
@@ -364,8 +362,7 @@ const Home2 = () => {
                     Social Media
                   </h1>
                   <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-                    dolore adipisci placeat.
+                    Social studies is the study of individuals, communities, systems, and their interactions across time and place that prepares students for local, national, and global civic life.
                   </p>
                   <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                     See More
@@ -378,77 +375,90 @@ const Home2 = () => {
         </>
 
 
+      </div>
+      <h1 className=' title-font text-center   mb-4 text-4xl font-extrabold leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-6xl text-blue-900'>Review</h1>
+      <div className="grid gap-y-10 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3 lg:divide-x  text-white">
+        {/* quote - start */}
+
+        {displayFeedbacks()}
+      </div>
+      
+      <div className="text-center  font-bold bottom-4 right-4">
+          <p className="text-3xl text-blue-900 md:text-5xl my-4 leading-relaxed md:leading-snug">
+            Leave us a feedback!
+          </p><p className="text-sm mb-10 md:text-base leading-snug text-black ">
+            Please provide your valuable feedback and something something ...
+          </p>
+         <a href="/Feedback"> <button className="mb-20 bg-blue-700 hover:bg-blue-800 text-white rounded-full py-3 px-4 shadow-lg ">
+            Feedback
+          </button></a>
         </div>
-        <h1 className=' title-font text-center  mb-4 text-4xl font-extrabold leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-6xl text-blue-900'>Review</h1>
-        <div className="grid gap-y-10 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3 lg:divide-x">
-          {/* quote - start */}
-         
-          {displayFeedbacks()}
-        </div>
-        <div className="py-5 mb-1 bg-[url('')] bg-cover  ">
-          <div className="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
-            <div className="text-center">
-              <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-black">
-                Frequently Asked <span className="text-indigo-600">Questions</span>
-              </h3>
-            </div>
-            <div className="mt-20">
-              <ul className="">
-                <li className="text-left mb-10">
-                  <div className="flex flex-row items-start mb-5">
-                    <div className="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-                      <svg
-                        width="30px"
-                        fill="white"
-                        height="30px"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g data-name="Layer 2">
-                          <g data-name="menu-arrow">
-                            <rect
-                              width={24}
-                              height={24}
-                              transform="rotate(180 12 12)"
-                              opacity={0}
-                            />
-                            <path d="M17 9A5 5 0 0 0 7 9a1 1 0 0 0 2 0 3 3 0 1 1 3 3 1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.1A5 5 0 0 0 17 9z"></path>
-                            <circle cx={12} cy={19} r={1} />
-                          </g>
+        <hr></hr>
+
+      <div className="py-5 mb-1 bg-[url('')] bg-cover  ">
+        <div className="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
+          <div className="text-center">
+            <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-black">
+              Frequently Asked <span className="text-indigo-600">Questions</span>
+            </h3>
+          </div>
+          <div className="mt-20">
+            <ul className="">
+              <li className="text-left mb-10">
+                <div className="flex flex-row items-start mb-5">
+                  <div className="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
+                    <svg
+                      width="30px"
+                      fill="white"
+                      height="30px"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g data-name="Layer 2">
+                        <g data-name="menu-arrow">
+                          <rect
+                            width={24}
+                            height={24}
+                            transform="rotate(180 12 12)"
+                            opacity={0}
+                          />
+                          <path d="M17 9A5 5 0 0 0 7 9a1 1 0 0 0 2 0 3 3 0 1 1 3 3 1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.1A5 5 0 0 0 17 9z"></path>
+                          <circle cx={12} cy={19} r={1} />
                         </g>
-                      </svg>
-                    </div>
-                    <div className="bg-gray-100 p-5 px-10 w-full flex items-center">
-                      <h4 className="text-md leading-6 font-medium text-gray-900">
-                        How do I join or create a project team?
-                      </h4>
-                    </div>
+                      </g>
+                    </svg>
                   </div>
-                  <div className="flex flex-row items-start">
-                    <div className="bg-indigo-100 p-5 px-10 w-full flex items-center">
-                      <p className="text-gray-700 text-sm">
-                        Navigate to the "Projects" section and follow the instructions to join existing teams or create new ones.
-                      </p>
-                    </div>
-                    <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-                      <svg
-                        height="25px"
-                        fill="white"
-                        version="1.1"
-                        id="Layer_1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlnsXlink="http://www.w3.org/1999/xlink"
-                        x="0px"
-                        y="0px"
-                        viewBox="0 0 295.238 295.238"
-                        style={{ enableBackground: "new 0 0 295.238 295.238" }}
-                        xmlSpace="preserve"
-                      >
+                  <div className="bg-gray-100 p-5 px-10 w-full flex items-center">
+                    <h4 className="text-md leading-6 font-medium text-gray-900">
+                      How do I join or create a project team?
+                    </h4>
+                  </div>
+                </div>
+                <div className="flex flex-row items-start">
+                  <div className="bg-indigo-100 p-5 px-10 w-full flex items-center">
+                    <p className="text-gray-700 text-sm">
+                      Navigate to the "Projects" section and follow the instructions to join existing teams or create new ones.
+                    </p>
+                  </div>
+                  <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
+                    <svg
+                      height="25px"
+                      fill="white"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 295.238 295.238"
+                      style={{ enableBackground: "new 0 0 295.238 295.238" }}
+                      xmlSpace="preserve"
+                    >
+                      <g>
                         <g>
                           <g>
-                            <g>
-                              <path
-                                d="M277.462,0.09l-27.681,20.72l-27.838,64.905h-22.386l-8.79-19.048h5.743c10.505,0,19.048-8.452,19.048-18.957V28.571
+                            <path
+                              d="M277.462,0.09l-27.681,20.72l-27.838,64.905h-22.386l-8.79-19.048h5.743c10.505,0,19.048-8.452,19.048-18.957V28.571
 				h9.524V0H196.51v28.571h9.524V47.71c0,5.248-4.271,9.433-9.524,9.433h-10.138L174.2,30.81l14.581-7.267L141.038,3.095
 				l-11.224,39.281c-0.305-23.371-19.386-42.29-42.829-42.29c-23.633,0-42.857,19.224-42.857,42.857
 				c0,14.281,7.233,27.676,19.048,35.595v7.176H51.643L50.9,89.619c-2.314,12.005-2.529,24.343-0.638,36.648l-32.486,57.905
@@ -466,73 +476,73 @@ const Home2 = () => {
 				v61.805h-95.238v-42.857h-47.62v-58.086l-30.862-7.043l27.876-49.7l-0.271-1.7c-1.771-10.419-1.871-21.567-0.333-31.09h3.59
 				h47.619H257.366z M245.714,85.714H232.3l23.738-55.343l10.557,5.257L245.714,85.714z M267.938,25.714l-5.267-2.633l5.267-3.943
 				V25.714z"
-                              />
-                              <path
-                                d="M96.51,123.81c-7.876,0-14.286-4.762-14.286-14.286H72.7c0,14.286,10.681,23.81,23.81,23.81
-				c13.129,0,23.81-9.524,23.81-23.81h-9.524C110.795,119.048,104.386,123.81,96.51,123.81z"
-                              />
-                            </g>
-                          </g>
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </li>
-                <li className="text-left mb-10">
-                  <div className="flex flex-row items-start mb-5">
-                    <div className="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-                      <svg
-                        width="30px"
-                        fill="white"
-                        height="30px"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g data-name="Layer 2">
-                          <g data-name="menu-arrow">
-                            <rect
-                              width={24}
-                              height={24}
-                              transform="rotate(180 12 12)"
-                              opacity={0}
                             />
-                            <path d="M17 9A5 5 0 0 0 7 9a1 1 0 0 0 2 0 3 3 0 1 1 3 3 1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.1A5 5 0 0 0 17 9z"></path>
-                            <circle cx={12} cy={19} r={1} />
+                            <path
+                              d="M96.51,123.81c-7.876,0-14.286-4.762-14.286-14.286H72.7c0,14.286,10.681,23.81,23.81,23.81
+				c13.129,0,23.81-9.524,23.81-23.81h-9.524C110.795,119.048,104.386,123.81,96.51,123.81z"
+                            />
                           </g>
                         </g>
-                      </svg>
-                    </div>
-                    <div className="bg-gray-100 p-5 px-10 w-full flex items-center">
-                      <h4 className="text-md leading-6 font-medium text-gray-900">
-                        How is my data protected on the corporate hub?
-                      </h4>
-                    </div>
+                      </g>
+                    </svg>
                   </div>
-                  <div className="flex flex-row items-start">
-                    <div className="bg-indigo-100 p-5 px-10 w-full flex items-center">
-                      <p className="text-gray-700 text-sm">
-                        We employ robust security measures, including encryption and regular audits, to protect your data. Detailed information can be found in our Privacy Policy.
-                      </p>
-                    </div>
-                    <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-                      <svg
-                        height="25px"
-                        fill="white"
-                        version="1.1"
-                        id="Layer_1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlnsXlink="http://www.w3.org/1999/xlink"
-                        x="0px"
-                        y="0px"
-                        viewBox="0 0 295.238 295.238"
-                        style={{ enableBackground: "new 0 0 295.238 295.238" }}
-                        xmlSpace="preserve"
-                      >
+                </div>
+              </li>
+              <li className="text-left mb-10">
+                <div className="flex flex-row items-start mb-5">
+                  <div className="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
+                    <svg
+                      width="30px"
+                      fill="white"
+                      height="30px"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g data-name="Layer 2">
+                        <g data-name="menu-arrow">
+                          <rect
+                            width={24}
+                            height={24}
+                            transform="rotate(180 12 12)"
+                            opacity={0}
+                          />
+                          <path d="M17 9A5 5 0 0 0 7 9a1 1 0 0 0 2 0 3 3 0 1 1 3 3 1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.1A5 5 0 0 0 17 9z"></path>
+                          <circle cx={12} cy={19} r={1} />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div className="bg-gray-100 p-5 px-10 w-full flex items-center">
+                    <h4 className="text-md leading-6 font-medium text-gray-900">
+                      How is my data protected on the corporate hub?
+                    </h4>
+                  </div>
+                </div>
+                <div className="flex flex-row items-start">
+                  <div className="bg-indigo-100 p-5 px-10 w-full flex items-center">
+                    <p className="text-gray-700 text-sm">
+                      We employ robust security measures, including encryption and regular audits, to protect your data. Detailed information can be found in our Privacy Policy.
+                    </p>
+                  </div>
+                  <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
+                    <svg
+                      height="25px"
+                      fill="white"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 295.238 295.238"
+                      style={{ enableBackground: "new 0 0 295.238 295.238" }}
+                      xmlSpace="preserve"
+                    >
+                      <g>
                         <g>
                           <g>
-                            <g>
-                              <path
-                                d="M277.462,0.09l-27.681,20.72l-27.838,64.905h-22.386l-8.79-19.048h5.743c10.505,0,19.048-8.452,19.048-18.957V28.571
+                            <path
+                              d="M277.462,0.09l-27.681,20.72l-27.838,64.905h-22.386l-8.79-19.048h5.743c10.505,0,19.048-8.452,19.048-18.957V28.571
 				h9.524V0H196.51v28.571h9.524V47.71c0,5.248-4.271,9.433-9.524,9.433h-10.138L174.2,30.81l14.581-7.267L141.038,3.095
 				l-11.224,39.281c-0.305-23.371-19.386-42.29-42.829-42.29c-23.633,0-42.857,19.224-42.857,42.857
 				c0,14.281,7.233,27.676,19.048,35.595v7.176H51.643L50.9,89.619c-2.314,12.005-2.529,24.343-0.638,36.648l-32.486,57.905
@@ -550,73 +560,73 @@ const Home2 = () => {
 				v61.805h-95.238v-42.857h-47.62v-58.086l-30.862-7.043l27.876-49.7l-0.271-1.7c-1.771-10.419-1.871-21.567-0.333-31.09h3.59
 				h47.619H257.366z M245.714,85.714H232.3l23.738-55.343l10.557,5.257L245.714,85.714z M267.938,25.714l-5.267-2.633l5.267-3.943
 				V25.714z"
-                              />
-                              <path
-                                d="M96.51,123.81c-7.876,0-14.286-4.762-14.286-14.286H72.7c0,14.286,10.681,23.81,23.81,23.81
-				c13.129,0,23.81-9.524,23.81-23.81h-9.524C110.795,119.048,104.386,123.81,96.51,123.81z"
-                              />
-                            </g>
-                          </g>
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </li>
-                <li className="text-left mb-10">
-                  <div className="flex flex-row items-start mb-5">
-                    <div className="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-                      <svg
-                        width="30px"
-                        fill="white"
-                        height="30px"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g data-name="Layer 2">
-                          <g data-name="menu-arrow">
-                            <rect
-                              width={24}
-                              height={24}
-                              transform="rotate(180 12 12)"
-                              opacity={0}
                             />
-                            <path d="M17 9A5 5 0 0 0 7 9a1 1 0 0 0 2 0 3 3 0 1 1 3 3 1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.1A5 5 0 0 0 17 9z"></path>
-                            <circle cx={12} cy={19} r={1} />
+                            <path
+                              d="M96.51,123.81c-7.876,0-14.286-4.762-14.286-14.286H72.7c0,14.286,10.681,23.81,23.81,23.81
+				c13.129,0,23.81-9.524,23.81-23.81h-9.524C110.795,119.048,104.386,123.81,96.51,123.81z"
+                            />
                           </g>
                         </g>
-                      </svg>
-                    </div>
-                    <div className="bg-gray-100 p-5 px-10 w-full flex items-center">
-                      <h4 className="text-md leading-6 font-medium text-gray-900">
-                        How do I update my profile information?
-                      </h4>
-                    </div>
+                      </g>
+                    </svg>
                   </div>
-                  <div className="flex flex-row items-start">
-                    <div className="bg-indigo-100 p-5 px-10 w-full flex items-center">
-                      <p className="text-gray-700 text-sm">
-                        After logging in, go to the "Profile" section under your account settings to update your personal and professional details.
-                      </p>
-                    </div>
-                    <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-                      <svg
-                        height="25px"
-                        fill="white"
-                        version="1.1"
-                        id="Layer_1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlnsXlink="http://www.w3.org/1999/xlink"
-                        x="0px"
-                        y="0px"
-                        viewBox="0 0 295.238 295.238"
-                        style={{ enableBackground: "new 0 0 295.238 295.238" }}
-                        xmlSpace="preserve"
-                      >
+                </div>
+              </li>
+              <li className="text-left mb-10">
+                <div className="flex flex-row items-start mb-5">
+                  <div className="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
+                    <svg
+                      width="30px"
+                      fill="white"
+                      height="30px"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g data-name="Layer 2">
+                        <g data-name="menu-arrow">
+                          <rect
+                            width={24}
+                            height={24}
+                            transform="rotate(180 12 12)"
+                            opacity={0}
+                          />
+                          <path d="M17 9A5 5 0 0 0 7 9a1 1 0 0 0 2 0 3 3 0 1 1 3 3 1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.1A5 5 0 0 0 17 9z"></path>
+                          <circle cx={12} cy={19} r={1} />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div className="bg-gray-100 p-5 px-10 w-full flex items-center">
+                    <h4 className="text-md leading-6 font-medium text-gray-900">
+                      How do I update my profile information?
+                    </h4>
+                  </div>
+                </div>
+                <div className="flex flex-row items-start">
+                  <div className="bg-indigo-100 p-5 px-10 w-full flex items-center">
+                    <p className="text-gray-700 text-sm">
+                      After logging in, go to the "Profile" section under your account settings to update your personal and professional details.
+                    </p>
+                  </div>
+                  <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
+                    <svg
+                      height="25px"
+                      fill="white"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 295.238 295.238"
+                      style={{ enableBackground: "new 0 0 295.238 295.238" }}
+                      xmlSpace="preserve"
+                    >
+                      <g>
                         <g>
                           <g>
-                            <g>
-                              <path
-                                d="M277.462,0.09l-27.681,20.72l-27.838,64.905h-22.386l-8.79-19.048h5.743c10.505,0,19.048-8.452,19.048-18.957V28.571
+                            <path
+                              d="M277.462,0.09l-27.681,20.72l-27.838,64.905h-22.386l-8.79-19.048h5.743c10.505,0,19.048-8.452,19.048-18.957V28.571
 				h9.524V0H196.51v28.571h9.524V47.71c0,5.248-4.271,9.433-9.524,9.433h-10.138L174.2,30.81l14.581-7.267L141.038,3.095
 				l-11.224,39.281c-0.305-23.371-19.386-42.29-42.829-42.29c-23.633,0-42.857,19.224-42.857,42.857
 				c0,14.281,7.233,27.676,19.048,35.595v7.176H51.643L50.9,89.619c-2.314,12.005-2.529,24.343-0.638,36.648l-32.486,57.905
@@ -634,170 +644,170 @@ const Home2 = () => {
 				v61.805h-95.238v-42.857h-47.62v-58.086l-30.862-7.043l27.876-49.7l-0.271-1.7c-1.771-10.419-1.871-21.567-0.333-31.09h3.59
 				h47.619H257.366z M245.714,85.714H232.3l23.738-55.343l10.557,5.257L245.714,85.714z M267.938,25.714l-5.267-2.633l5.267-3.943
 				V25.714z"
-                              />
-                              <path
-                                d="M96.51,123.81c-7.876,0-14.286-4.762-14.286-14.286H72.7c0,14.286,10.681,23.81,23.81,23.81
+                            />
+                            <path
+                              d="M96.51,123.81c-7.876,0-14.286-4.762-14.286-14.286H72.7c0,14.286,10.681,23.81,23.81,23.81
 				c13.129,0,23.81-9.524,23.81-23.81h-9.524C110.795,119.048,104.386,123.81,96.51,123.81z"
-                              />
-                            </g>
+                            />
                           </g>
                         </g>
-                      </svg>
-                    </div>
+                      </g>
+                    </svg>
                   </div>
-                </li>
-              </ul>
-            </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
-        <div>
-          <footer className="px-4 divide-y dark:bg-blue-900 dark:text-gray-800">
-            <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-              <div className="lg:w-1/3">
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  className="flex justify-center space-x-3 lg:justify-start"
-                >
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-600">
+      </div>
+      <div>
+        <footer className="px-4 divide-y dark:bg-blue-900 dark:text-gray-800">
+          <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+            <div className="lg:w-1/3">
+              <a
+                rel="noopener noreferrer"
+                href="#"
+                className="flex justify-center space-x-3 lg:justify-start"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-600">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 32 32"
+                    fill="currentColor"
+                    className="flex-shrink-0 w-5 h-5 rounded-full dark:text-gray-50"
+                  >
+                    <path d="M18.266 26.068l7.839-7.854 4.469 4.479c1.859 1.859 1.859 4.875 0 6.734l-1.104 1.104c-1.859 1.865-4.875 1.865-6.734 0zM30.563 2.531l-1.109-1.104c-1.859-1.859-4.875-1.859-6.734 0l-6.719 6.734-6.734-6.734c-1.859-1.859-4.875-1.859-6.734 0l-1.104 1.104c-1.859 1.859-1.859 4.875 0 6.734l6.734 6.734-6.734 6.734c-1.859 1.859-1.859 4.875 0 6.734l1.104 1.104c1.859 1.859 4.875 1.859 6.734 0l21.307-21.307c1.859-1.859 1.859-4.875 0-6.734z" />
+                  </svg>
+                </div>
+                <span className="self-center text-white text-2xl font-semibold">Corporate Hub</span>
+              </a>
+            </div>
+            <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+              <div className="space-y-3">
+                <h3 className="tracking-wide uppercase dark:text-white">Resources</h3>
+                <ul className="space-y-1 text-white">
+                  <li>
+                    <a rel="noopener noreferrer" href="/Features">
+                      Features
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="noopener noreferrer" href="/About">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="noopener noreferrer" href="#">
+                      Pricing
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="noopener noreferrer" href="#">
+                      FAQ
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="space-y-3">
+                <h3 className="tracking-wide uppercase dark:text-white">Company</h3>
+                <ul className="space-y-1 text-white">
+                  <li>
+                    <a rel="noopener noreferrer" href="#">
+                      Privacy
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="noopener noreferrer" href="#">
+                      Terms of Service
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="space-y-3">
+                <h3 className="uppercase dark:text-white">Developers</h3>
+                <ul className="space-y-1 text-white">
+                  <li>
+                    <a rel="noopener noreferrer" href="#">
+                      Public API
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="noopener noreferrer" href="#">
+                      Documentation
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="noopener noreferrer" href="#">
+                      Guides
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="space-y-3">
+                <div className="uppercase dark:text-white">Social media</div>
+                <div className="flex justify-start space-x-3">
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    title="Facebook"
+                    className="flex items-center p-1 text-white"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 32 32"
+                      className="w-5 h-5 fill-current"
+                    >
+                      <path d="M32 16c0-8.839-7.167-16-16-16-8.839 0-16 7.161-16 16 0 7.984 5.849 14.604 13.5 15.803v-11.177h-4.063v-4.625h4.063v-3.527c0-4.009 2.385-6.223 6.041-6.223 1.751 0 3.584 0.312 3.584 0.312v3.937h-2.021c-1.984 0-2.604 1.235-2.604 2.5v3h4.437l-0.713 4.625h-3.724v11.177c7.645-1.199 13.5-7.819 13.5-15.803z" />
+                    </svg>
+                  </a>
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    title="Twitter"
+                    className="flex items-center p-1 text-white"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-5 h-5 fill-current"
+                    >
+                      <path d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z" />
+                    </svg>
+                  </a>
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    title="Instagram"
+                    className="flex items-center p-1 text-white"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 32 32"
                       fill="currentColor"
-                      className="flex-shrink-0 w-5 h-5 rounded-full dark:text-gray-50"
+                      className="w-5 h-5 fill-current"
                     >
-                      <path d="M18.266 26.068l7.839-7.854 4.469 4.479c1.859 1.859 1.859 4.875 0 6.734l-1.104 1.104c-1.859 1.865-4.875 1.865-6.734 0zM30.563 2.531l-1.109-1.104c-1.859-1.859-4.875-1.859-6.734 0l-6.719 6.734-6.734-6.734c-1.859-1.859-4.875-1.859-6.734 0l-1.104 1.104c-1.859 1.859-1.859 4.875 0 6.734l6.734 6.734-6.734 6.734c-1.859 1.859-1.859 4.875 0 6.734l1.104 1.104c1.859 1.859 4.875 1.859 6.734 0l21.307-21.307c1.859-1.859 1.859-4.875 0-6.734z" />
+                      <path d="M16 0c-4.349 0-4.891 0.021-6.593 0.093-1.709 0.084-2.865 0.349-3.885 0.745-1.052 0.412-1.948 0.959-2.833 1.849-0.891 0.885-1.443 1.781-1.849 2.833-0.396 1.020-0.661 2.176-0.745 3.885-0.077 1.703-0.093 2.244-0.093 6.593s0.021 4.891 0.093 6.593c0.084 1.704 0.349 2.865 0.745 3.885 0.412 1.052 0.959 1.948 1.849 2.833 0.885 0.891 1.781 1.443 2.833 1.849 1.020 0.391 2.181 0.661 3.885 0.745 1.703 0.077 2.244 0.093 6.593 0.093s4.891-0.021 6.593-0.093c1.704-0.084 2.865-0.355 3.885-0.745 1.052-0.412 1.948-0.959 2.833-1.849 0.891-0.885 1.443-1.776 1.849-2.833 0.391-1.020 0.661-2.181 0.745-3.885 0.077-1.703 0.093-2.244 0.093-6.593s-0.021-4.891-0.093-6.593c-0.084-1.704-0.355-2.871-0.745-3.885-0.412-1.052-0.959-1.948-1.849-2.833-0.885-0.891-1.776-1.443-2.833-1.849-1.020-0.396-2.181-0.661-3.885-0.745-1.703-0.077-2.244-0.093-6.593-0.093zM16 2.88c4.271 0 4.781 0.021 6.469 0.093 1.557 0.073 2.405 0.333 2.968 0.553 0.751 0.291 1.276 0.635 1.844 1.197 0.557 0.557 0.901 1.088 1.192 1.839 0.22 0.563 0.48 1.411 0.553 2.968 0.072 1.688 0.093 2.199 0.093 6.469s-0.021 4.781-0.099 6.469c-0.084 1.557-0.344 2.405-0.563 2.968-0.303 0.751-0.641 1.276-1.199 1.844-0.563 0.557-1.099 0.901-1.844 1.192-0.556 0.22-1.416 0.48-2.979 0.553-1.697 0.072-2.197 0.093-6.479 0.093s-4.781-0.021-6.48-0.099c-1.557-0.084-2.416-0.344-2.979-0.563-0.76-0.303-1.281-0.641-1.839-1.199-0.563-0.563-0.921-1.099-1.197-1.844-0.224-0.556-0.48-1.416-0.563-2.979-0.057-1.677-0.084-2.197-0.084-6.459 0-4.26 0.027-4.781 0.084-6.479 0.083-1.563 0.339-2.421 0.563-2.979 0.276-0.761 0.635-1.281 1.197-1.844 0.557-0.557 1.079-0.917 1.839-1.199 0.563-0.219 1.401-0.479 2.964-0.557 1.697-0.061 2.197-0.083 6.473-0.083zM16 7.787c-4.541 0-8.213 3.677-8.213 8.213 0 4.541 3.677 8.213 8.213 8.213 4.541 0 8.213-3.677 8.213-8.213 0-4.541-3.677-8.213-8.213-8.213zM16 21.333c-2.948 0-5.333-2.385-5.333-5.333s2.385-5.333 5.333-5.333c2.948 0 5.333 2.385 5.333 5.333s-2.385 5.333-5.333 5.333zM26.464 7.459c0 1.063-0.865 1.921-1.923 1.921-1.063 0-1.921-0.859-1.921-1.921 0-1.057 0.864-1.917 1.921-1.917s1.923 0.86 1.923 1.917z" />
                     </svg>
-                  </div>
-                  <span className="self-center text-white text-2xl font-semibold">Corporate Hub</span>
-                </a>
-              </div>
-              <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
-                <div className="space-y-3">
-                  <h3 className="tracking-wide uppercase dark:text-white">Resources</h3>
-                  <ul className="space-y-1 text-white">
-                    <li>
-                      <a rel="noopener noreferrer" href="/Features">
-                        Features
-                      </a>
-                    </li>
-                    <li>
-                      <a rel="noopener noreferrer" href="/About">
-                        About
-                      </a>
-                    </li>
-                    <li>
-                      <a rel="noopener noreferrer" href="#">
-                        Pricing
-                      </a>
-                    </li>
-                    <li>
-                      <a rel="noopener noreferrer" href="#">
-                        FAQ
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="space-y-3">
-                  <h3 className="tracking-wide uppercase dark:text-white">Company</h3>
-                  <ul className="space-y-1 text-white">
-                    <li>
-                      <a rel="noopener noreferrer" href="#">
-                        Privacy
-                      </a>
-                    </li>
-                    <li>
-                      <a rel="noopener noreferrer" href="#">
-                        Terms of Service
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="space-y-3">
-                  <h3 className="uppercase dark:text-white">Developers</h3>
-                  <ul className="space-y-1 text-white">
-                    <li>
-                      <a rel="noopener noreferrer" href="#">
-                        Public API
-                      </a>
-                    </li>
-                    <li>
-                      <a rel="noopener noreferrer" href="#">
-                        Documentation
-                      </a>
-                    </li>
-                    <li>
-                      <a rel="noopener noreferrer" href="#">
-                        Guides
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="space-y-3">
-                  <div className="uppercase dark:text-white">Social media</div>
-                  <div className="flex justify-start space-x-3">
-                    <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      title="Facebook"
-                      className="flex items-center p-1 text-white"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 32 32"
-                        className="w-5 h-5 fill-current"
-                      >
-                        <path d="M32 16c0-8.839-7.167-16-16-16-8.839 0-16 7.161-16 16 0 7.984 5.849 14.604 13.5 15.803v-11.177h-4.063v-4.625h4.063v-3.527c0-4.009 2.385-6.223 6.041-6.223 1.751 0 3.584 0.312 3.584 0.312v3.937h-2.021c-1.984 0-2.604 1.235-2.604 2.5v3h4.437l-0.713 4.625h-3.724v11.177c7.645-1.199 13.5-7.819 13.5-15.803z" />
-                      </svg>
-                    </a>
-                    <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      title="Twitter"
-                      className="flex items-center p-1 text-white"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-5 h-5 fill-current"
-                      >
-                        <path d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z" />
-                      </svg>
-                    </a>
-                    <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      title="Instagram"
-                      className="flex items-center p-1 text-white"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 32 32"
-                        fill="currentColor"
-                        className="w-5 h-5 fill-current"
-                      >
-                        <path d="M16 0c-4.349 0-4.891 0.021-6.593 0.093-1.709 0.084-2.865 0.349-3.885 0.745-1.052 0.412-1.948 0.959-2.833 1.849-0.891 0.885-1.443 1.781-1.849 2.833-0.396 1.020-0.661 2.176-0.745 3.885-0.077 1.703-0.093 2.244-0.093 6.593s0.021 4.891 0.093 6.593c0.084 1.704 0.349 2.865 0.745 3.885 0.412 1.052 0.959 1.948 1.849 2.833 0.885 0.891 1.781 1.443 2.833 1.849 1.020 0.391 2.181 0.661 3.885 0.745 1.703 0.077 2.244 0.093 6.593 0.093s4.891-0.021 6.593-0.093c1.704-0.084 2.865-0.355 3.885-0.745 1.052-0.412 1.948-0.959 2.833-1.849 0.891-0.885 1.443-1.776 1.849-2.833 0.391-1.020 0.661-2.181 0.745-3.885 0.077-1.703 0.093-2.244 0.093-6.593s-0.021-4.891-0.093-6.593c-0.084-1.704-0.355-2.871-0.745-3.885-0.412-1.052-0.959-1.948-1.849-2.833-0.885-0.891-1.776-1.443-2.833-1.849-1.020-0.396-2.181-0.661-3.885-0.745-1.703-0.077-2.244-0.093-6.593-0.093zM16 2.88c4.271 0 4.781 0.021 6.469 0.093 1.557 0.073 2.405 0.333 2.968 0.553 0.751 0.291 1.276 0.635 1.844 1.197 0.557 0.557 0.901 1.088 1.192 1.839 0.22 0.563 0.48 1.411 0.553 2.968 0.072 1.688 0.093 2.199 0.093 6.469s-0.021 4.781-0.099 6.469c-0.084 1.557-0.344 2.405-0.563 2.968-0.303 0.751-0.641 1.276-1.199 1.844-0.563 0.557-1.099 0.901-1.844 1.192-0.556 0.22-1.416 0.48-2.979 0.553-1.697 0.072-2.197 0.093-6.479 0.093s-4.781-0.021-6.48-0.099c-1.557-0.084-2.416-0.344-2.979-0.563-0.76-0.303-1.281-0.641-1.839-1.199-0.563-0.563-0.921-1.099-1.197-1.844-0.224-0.556-0.48-1.416-0.563-2.979-0.057-1.677-0.084-2.197-0.084-6.459 0-4.26 0.027-4.781 0.084-6.479 0.083-1.563 0.339-2.421 0.563-2.979 0.276-0.761 0.635-1.281 1.197-1.844 0.557-0.557 1.079-0.917 1.839-1.199 0.563-0.219 1.401-0.479 2.964-0.557 1.697-0.061 2.197-0.083 6.473-0.083zM16 7.787c-4.541 0-8.213 3.677-8.213 8.213 0 4.541 3.677 8.213 8.213 8.213 4.541 0 8.213-3.677 8.213-8.213 0-4.541-3.677-8.213-8.213-8.213zM16 21.333c-2.948 0-5.333-2.385-5.333-5.333s2.385-5.333 5.333-5.333c2.948 0 5.333 2.385 5.333 5.333s-2.385 5.333-5.333 5.333zM26.464 7.459c0 1.063-0.865 1.921-1.923 1.921-1.063 0-1.921-0.859-1.921-1.921 0-1.057 0.864-1.917 1.921-1.917s1.923 0.86 1.923 1.917z" />
-                      </svg>
-                    </a>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
-            <div className="py-6 text-sm text-center dark:text-white">
-              © 2024 Corporate Hub. All rights reserved. Pragati Gupta
-            </div>
-          </footer>
+          </div>
+          <div className="py-6 text-sm text-center dark:text-white">
+            © 2024 Corporate Hub. All rights reserved. Pragati Gupta
+          </div>
+        </footer>
 
 
-        </div>
-      </>
-      )
+      </div>
+    </>
+  )
 }
 
-      export default Home2
+export default Home2
 
-      {/*import React, { useState, useEffect } from 'react'
+{/*import React, { useState, useEffect } from 'react'
 import { ReactTyped } from "react-typed";
 import comm from "../assets/community.png"
 import mission from "../assets/mission.png"
@@ -989,7 +999,7 @@ const Home2 = () => {
 
         <>
           {/* component */}
-      {/* This is an example component 
+{/* This is an example component 
           <link href="https://unpkg.com/pattern.css" rel="stylesheet" />
           <div>
             <video className="h-screen w-screen rounded-lg object-cover absolute -z-10" controls autoPlay muted >

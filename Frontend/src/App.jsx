@@ -42,7 +42,7 @@ const App = () => {
               <Route path='/Feedback' element={<UserAuth><Feedback /></UserAuth>} />
 
               <Route path='/Contact' element={<UserAuth><Contact /></UserAuth>} />
-              <Route path='/EditPage' element={<EditPage />} />
+              <Route path='/EditPage' element={<UserAuth><EditPage/> </UserAuth>}/>
               <Route path='/Signupp' element={<Signupp />} />
               <Route path='/Features' element={<Features />} />
               <Route path='/About' element={<About />} />
@@ -57,7 +57,7 @@ const App = () => {
               
 
 
-              <Route path='/Admin' element={<AdminAuth><Admin /></AdminAuth>}>
+              <Route path='/Admin' element={<Admin />}>
                 <Route path='dashboard' element={<Dashboard />} />
                 <Route path='Manageuser' element={<Manageuser />} />
                 <Route path='ManageProfiles' element={<ManageProfiles />} />
